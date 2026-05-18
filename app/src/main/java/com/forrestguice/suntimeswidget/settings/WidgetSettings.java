@@ -51,6 +51,7 @@ import com.forrestguice.suntimeswidget.calculator.settings.display.LengthUnitDis
 import com.forrestguice.suntimeswidget.calendar.CalendarSettings;
 import com.forrestguice.suntimeswidget.events.EventSettings;
 import com.forrestguice.suntimeswidget.getfix.LocationHelperSettings;
+import com.forrestguice.suntimeswidget.themes.defaults.DarkTheme1;
 import com.forrestguice.suntimeswidget.widgets.AlarmWidget0_2x2;
 import com.forrestguice.suntimeswidget.widgets.AlarmWidgetSettings;
 import com.forrestguice.suntimeswidget.widgets.ClockWidgetSettings;
@@ -128,7 +129,7 @@ public class WidgetSettings
                                                                                    new String[] {"moon", PREF_DEF_GENERAL_CALCULATOR_MOON} };
 
     public static final String PREF_KEY_APPEARANCE_THEME = "theme";
-    public static final String PREF_DEF_APPEARANCE_THEME = DarkTheme.THEMEDEF_NAME;
+    public static final String PREF_DEF_APPEARANCE_THEME = DarkTheme1.THEMEDEF_NAME;
 
     public static final String PREF_KEY_APPEARANCE_SHOWTITLE = "showtitle";
     public static final boolean PREF_DEF_APPEARANCE_SHOWTITLE = false;
