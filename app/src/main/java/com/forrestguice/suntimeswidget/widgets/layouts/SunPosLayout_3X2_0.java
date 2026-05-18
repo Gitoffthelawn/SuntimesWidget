@@ -209,7 +209,7 @@ public class SunPosLayout_3X2_0 extends SunPosLayout
     }
 
     public WorldMapWidgetSettings.WorldMapWidgetMode getMapMode(Context context, int appWidgetId) {
-        return WorldMapWidgetSettings.loadSunPosMapModePref(context, appWidgetId, getMapTag());
+        return (mapMode != null ? mapMode : WorldMapWidgetSettings.loadSunPosMapModePref(context, appWidgetId, getMapTag()));
     }
 
     public String getMapTag()

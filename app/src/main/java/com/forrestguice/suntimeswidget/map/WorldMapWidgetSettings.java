@@ -26,6 +26,9 @@ import android.net.Uri;
 import com.forrestguice.suntimeswidget.R;
 
 import com.forrestguice.suntimeswidget.widgets.SuntimesWidget2;
+import com.forrestguice.suntimeswidget.widgets.layouts.SunPosLayout;
+import com.forrestguice.suntimeswidget.widgets.layouts.SunPosLayout_3X2_0;
+import com.forrestguice.suntimeswidget.widgets.layouts.SunPosLayout_3X2_1;
 import com.forrestguice.suntimeswidget.widgets.layouts.SunPosLayout_3X2_2;
 import com.forrestguice.suntimeswidget.widgets.layouts.SunPosLayout_3X3_0;
 import com.forrestguice.suntimeswidget.widgets.layouts.SuntimesLayout;
@@ -181,8 +184,8 @@ public class WorldMapWidgetSettings
      */
     public static enum WorldMapWidgetMode implements WidgetSettings.WidgetModeDisplay
     {
-        EQUIRECTANGULAR_SIMPLE("Simple", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_0, new SunPosLayout_3X2_2(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQD),
-        EQUIRECTANGULAR_BLUEMARBLE("Blue Marble", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_01, new SunPosLayout_3X2_2(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQD),
+        EQUIRECTANGULAR_SIMPLE("Simple", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_0, new SunPosLayout_3X2_0(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQD),
+        EQUIRECTANGULAR_BLUEMARBLE("Blue Marble", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_01, new SunPosLayout_3X2_0(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQD),
         EQUIAZIMUTHAL_SIMPLE("Polar [north]", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_0, new SunPosLayout_3X3_0(), false, 90, 0, "Equidistant Azimuthal", PROJ4_AEQD),
         EQUIAZIMUTHAL_SIMPLE1("Polar [south]", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_1, new SunPosLayout_3X3_0(), false, -90, 0, "Equidistant Azimuthal", PROJ4_AEQD),
         EQUIAZIMUTHAL_SIMPLE2("Equidistant Azimuthal", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_2, new SunPosLayout_3X3_0(),true, 33.45, -111.94, "Equidistant Azimuthal", PROJ4_AEQD1),
@@ -191,7 +194,7 @@ public class WorldMapWidgetSettings
         SINUSOIDAL_SIMPLE("Sinusoidal", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x3_5,  new SunPosLayout_3X3_0(),false, 0, 0, "Sinuisoidal", PROJ4_SINU),
         ;
 
-        private final SuntimesLayout layout;
+        private final SunPosLayout layout;
         private final int layoutID;
         private String displayString;
         private final String tag;
@@ -200,7 +203,7 @@ public class WorldMapWidgetSettings
         private String projectionTitle;
         private final String proj4String;
 
-        private WorldMapWidgetMode(@NonNull String displayString, String tag, int layoutID, SuntimesLayout layout, boolean supportsCenter, double centerLat, double centerLon, String projectionTitle, String proj4String)
+        private WorldMapWidgetMode(@NonNull String displayString, String tag, int layoutID, SunPosLayout layout, boolean supportsCenter, double centerLat, double centerLon, String projectionTitle, String proj4String)
         {
             this.displayString = displayString;
             this.projectionTitle = projectionTitle;
@@ -229,6 +232,7 @@ public class WorldMapWidgetSettings
 
         @Override
         public SuntimesLayout getWidgetLayout() {
+            layout.setMapMode(this);
             return layout;
         }
 
