@@ -106,12 +106,8 @@ public class SunLayout_2x1_0 extends SunLayout
             views.setTextViewTextSize(R.id.text_time_noon, TypedValue.COMPLEX_UNIT_DIP, adjustedSizeSp[0]);
             views.setTextViewTextSize(R.id.text_time_noon_suffix, TypedValue.COMPLEX_UNIT_DIP, adjustedSizeSp[1]);
 
-            if (adjustedSizeSp[1] > timeSizeSp)
-            {
-                views.setTextViewTextSize(R.id.text_delta_day_prefix, TypedValue.COMPLEX_UNIT_DIP, adjustedSizeSp[1]);
+            if (adjustedSizeSp[1] > timeSizeSp) {
                 views.setTextViewTextSize(R.id.text_delta_day_value, TypedValue.COMPLEX_UNIT_DIP, adjustedSizeSp[1]);
-                views.setTextViewTextSize(R.id.text_delta_day_units, TypedValue.COMPLEX_UNIT_DIP, adjustedSizeSp[1]);
-                views.setTextViewTextSize(R.id.text_delta_day_suffix, TypedValue.COMPLEX_UNIT_DIP, adjustedSizeSp[1]);
             }
 
             /*
@@ -170,14 +166,12 @@ public class SunLayout_2x1_0 extends SunLayout
         // update day delta
         boolean isSame = (data.dayLengthToday() == data.dayLengthOther());
         TimeDisplayText dayDeltaDisplay = delta_utils.timeDeltaLongDisplayString(data.dayLengthToday(), data.dayLengthOther(), true);
+        String dayDeltaString = context.getString(data.dayDeltaPrefix()) + " " + dayDeltaDisplay;
         String dayDeltaValue = dayDeltaDisplay.getValue();
-        String dayDeltaUnits = dayDeltaDisplay.getUnits();
-        String dayDeltaSuffix = dayDeltaDisplay.getSuffix();
 
-        views.setTextViewText(R.id.text_delta_day_prefix, context.getString(data.dayDeltaPrefix()));   // TODO: refactor to use only a single TextView and SpannableString
-        views.setTextViewText(R.id.text_delta_day_value, (isSame ? "" : (boldTime ? SpanUtils.createBoldSpan(null, dayDeltaValue, dayDeltaValue) : dayDeltaValue)));
-        views.setTextViewText(R.id.text_delta_day_units, (isSame ? "" : dayDeltaUnits));
-        views.setTextViewText(R.id.text_delta_day_suffix, dayDeltaSuffix);
+        CharSequence dayDelta = (boldTime ? SpanUtils.createBoldColorSpan(null, dayDeltaString, dayDeltaValue, timeColor)
+                                          : SpanUtils.createColorSpan(null, dayDeltaString, dayDeltaValue, timeColor));
+        views.setTextViewText(R.id.text_delta_day_value, (isSame ? "" : dayDelta));
         views.setViewVisibility(R.id.layout_delta_day, (showDayDelta ? View.VISIBLE : View.GONE));
 
         // update solar noon
@@ -190,6 +184,9 @@ public class SunLayout_2x1_0 extends SunLayout
         }
     }
 
+    protected int timeColor = Color.WHITE;
+    protected int textColor = Color.WHITE;
+
     @Override
     public void themeViews(Context context, RemoteViews views, SuntimesTheme theme)
     {
@@ -197,8 +194,8 @@ public class SunLayout_2x1_0 extends SunLayout
 
         iconSizeDp = 22;   // override 32
         int noonColor = theme.getNoonTextColor();
-        int timeColor = theme.getTimeColor();
-        int textColor = theme.getTextColor();
+        timeColor = theme.getTimeColor();
+        textColor = theme.getTextColor();
 
         // theme sunrise text
         views.setTextColor(R.id.text_time_rise_suffix, suffixColor);
@@ -209,10 +206,7 @@ public class SunLayout_2x1_0 extends SunLayout
         views.setTextColor(R.id.text_time_set, sunsetColor);
 
         // theme note
-        views.setTextColor(R.id.text_delta_day_prefix, textColor);
-        views.setTextColor(R.id.text_delta_day_value, timeColor);
-        views.setTextColor(R.id.text_delta_day_units, textColor);
-        views.setTextColor(R.id.text_delta_day_suffix, textColor);
+        views.setTextColor(R.id.text_delta_day_value, textColor);
 
         // theme noon
         views.setTextColor(R.id.text_time_noon_suffix, suffixColor);
@@ -233,10 +227,7 @@ public class SunLayout_2x1_0 extends SunLayout
             views.setTextViewTextSize(R.id.text_time_set, TypedValue.COMPLEX_UNIT_DIP, timeSizeSp);
             views.setTextViewTextSize(R.id.text_time_set_suffix, TypedValue.COMPLEX_UNIT_DIP, suffixSizeSp);
 
-            views.setTextViewTextSize(R.id.text_delta_day_prefix, TypedValue.COMPLEX_UNIT_DIP, textSizeSp);
             views.setTextViewTextSize(R.id.text_delta_day_value, TypedValue.COMPLEX_UNIT_DIP, textSizeSp);
-            views.setTextViewTextSize(R.id.text_delta_day_units, TypedValue.COMPLEX_UNIT_DIP, textSizeSp);
-            views.setTextViewTextSize(R.id.text_delta_day_suffix, TypedValue.COMPLEX_UNIT_DIP, textSizeSp);
         }
 
         Bitmap sunriseIcon = SuntimesUtils.layerDrawableToBitmap(context, R.drawable.ic_sunrise0, theme.getSunriseIconColor(), theme.getSunriseIconStrokeColor(), theme.getSunriseIconStrokePixels(context));
