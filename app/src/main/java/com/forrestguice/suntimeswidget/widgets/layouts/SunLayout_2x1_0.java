@@ -21,6 +21,7 @@ package com.forrestguice.suntimeswidget.widgets.layouts;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.TypedValue;
@@ -85,7 +86,7 @@ public class SunLayout_2x1_0 extends SunLayout
         int numRows = 1, numCols = 2;
         numRows += showSolarNoon ? 1 : 0;
         numRows += showDayDelta ? 1 : 0;
-        int[] maxDp = new int[] {(maxDimensionsDp[0] - (paddingDp[0] + paddingDp[2] + 32)) / numCols,
+        int[] maxDp = new int[] {(maxDimensionsDp[0] - (paddingDp[0] + paddingDp[2])) / numCols,
                 ((maxDimensionsDp[1] - (paddingDp[1] + paddingDp[3])) / numRows)};
         float maxSp = SuntimesLayout.MAX_SP;
         return adjustTextSize(context, maxDp, paddingDp, "sans-serif", boldTime, (showSeconds ? "00:00:00" : "00:00"), timeSizeSp, maxSp, "MM", suffixSizeSp, iconSizeDp);
