@@ -41,6 +41,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import com.forrestguice.annotation.NonNull;
@@ -77,6 +78,11 @@ public class WidgetThemes
     private static SuntimesTheme defaultTheme = null;
     private static boolean initialized = false;
 
+    public static final Map<String, Class<?>> defaultThemes = new HashMap<>();
+    public static boolean isDefaultTheme(String name) {
+        return (defaultThemes.containsKey(name));
+    }
+
     public static void initThemes(Context context)
     {
         if (initialized)
@@ -101,24 +107,14 @@ public class WidgetThemes
                 LightTheme1.class,                                 // 6
         };
 
-        SharedPreferences themePref = getSharedPreferences(context);
-        Set<String> themesToProcess = loadInstalledList(themePref);
-        if (themesToProcess != null) {
-            for (String themeName : themesToProcess)
-            {
-                ThemeDescriptor themeDesc = loadDescriptor(context, themeName);
-                if (themeDesc != null)
-                {
-                    addValue(context, themeDesc, false);   // build initial list
-                } else {
-                    Log.w("initThemes", themeName + " does not seem to be installed; ignoring...");
-                }
-            }
-        }
-
+        defaultThemes.clear();
         boolean added = false;
-        for (int i=0; i<defThemes.length; i++) {
-            added = initTheme(context, themePref, defThemes[i], defThemeClasses[i]) || added;
+        for (int i=0; i<defThemeClasses.length; i++)
+        {
+            Class<?> themeClass = defThemeClasses[i];
+            ThemeDescriptor themeDescriptor = defThemes[i];
+            defaultThemes.put(themeDescriptor.name(), themeClass);
+            added = addValue(context, themeDescriptor, false);
         }
 
         if (added)
@@ -129,21 +125,19 @@ public class WidgetThemes
         initialized = true;
     }
 
-    protected static boolean initTheme(Context context, SharedPreferences themePref, ThemeDescriptor themeDescriptor, Class<?> themeClass)
+    @Nullable
+    protected static SuntimesTheme initDefaultTheme(Context context, @Nullable Class<?> themeClass)
     {
-        boolean added = addValue(themeDescriptor);
-        if (!SuntimesTheme.isInstalled(themePref, themeDescriptor))    // add default (if missing)
+        SuntimesTheme theme = null;
+        if (themeClass != null)
         {
             try {
-                SuntimesTheme theme = (SuntimesTheme) themeClass.getConstructor(Context.class).newInstance(context);
-                theme.saveTheme(themePref);
-                Log.i("initThemes", "initTheme: initialized " + theme.themeName());
-
+                theme = (SuntimesTheme) themeClass.getConstructor(Context.class).newInstance(context);
             } catch (Exception e) {
-                Log.e("initThemes", "initTheme: failed to init " + themeDescriptor.name() + ": " + e);
+                Log.e("initThemes", "initTheme: failed to init " + themeClass, e);
             }
         }
-        return added;
+        return theme;
     }
 
     private static final HashMap<String, ThemeDescriptor> themes = new HashMap<>();
@@ -238,14 +232,18 @@ public class WidgetThemes
 
     public static SuntimesTheme loadTheme(Context context, String themeName)
     {
-        if (!initialized)
-        {
+        if (!initialized) {
             initThemes(context);
         }
 
-        SuntimesTheme theme = new SuntimesTheme();
-        theme.initTheme(context, PREFS_THEMES, themeName, defaultTheme);
-        return theme;
+        SuntimesTheme theme;
+        if (isDefaultTheme(themeName)) {
+            theme = initDefaultTheme(context, defaultThemes.get(themeName));
+        } else {
+            theme = new SuntimesTheme();
+            theme.initTheme(context, PREFS_THEMES, themeName, defaultTheme);
+        }
+        return (theme != null ? theme : defaultTheme);
     }
 
     @Nullable
