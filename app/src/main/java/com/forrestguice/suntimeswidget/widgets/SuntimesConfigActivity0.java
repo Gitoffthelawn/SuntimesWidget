@@ -484,7 +484,7 @@ public class SuntimesConfigActivity0 extends AppCompatActivity
     protected WidgetModeAdapter createAdapter_widgetModeSun2x1()
     {
         WidgetModeAdapter adapter = new WidgetModeAdapter(this, R.layout.layout_listitem_oneline, WidgetSettings.WidgetModeSun2x1.values());
-        adapter.setDropDownViewResource(R.layout.layout_listitem_layouts);
+        adapter.setDropDownViewResource(R.layout.layout_listitem_layouts1);
         adapter.setThemeValues(themeValues);
         return adapter;
     }
@@ -492,7 +492,7 @@ public class SuntimesConfigActivity0 extends AppCompatActivity
     protected WidgetModeAdapter createAdapter_widgetModeSun3x1()
     {
         WidgetModeAdapter adapter = new WidgetModeAdapter(this, R.layout.layout_listitem_oneline, WidgetSettings.WidgetModeSun3x1.values());
-        adapter.setDropDownViewResource(R.layout.layout_listitem_layouts);
+        adapter.setDropDownViewResource(R.layout.layout_listitem_layouts1);
         adapter.setThemeValues(themeValues);
         return adapter;
     }
