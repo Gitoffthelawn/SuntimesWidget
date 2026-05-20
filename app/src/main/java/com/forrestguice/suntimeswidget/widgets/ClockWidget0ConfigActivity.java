@@ -105,7 +105,7 @@ public class ClockWidget0ConfigActivity extends SuntimesConfigActivity0
     }
     private static final int[] requiredFeatures = new int[] {};
 
-    public static final boolean DEF_SHOWTITLE = true;
+    public static final boolean DEF_SHOWTITLE = false;
     public static final String DEF_TITLETEXT = "%t";
 
     @Override

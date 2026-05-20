@@ -47,7 +47,7 @@ public class ClockWidgetSettings
 
     public static final String MODE_1x1 = "1x1";
     public static final String PREF_KEY_APPEARANCE_WIDGETMODE_CLOCK = "widgetmode_clock";
-    public static final WidgetModeClock1x1 PREF_DEF_APPEARANCE_WIDGETMODE_CLOCK1x1 = WidgetModeClock1x1.CLOCK0;
+    public static final WidgetModeClock1x1 PREF_DEF_APPEARANCE_WIDGETMODE_CLOCK1x1 = WidgetModeClock1x1.CLOCK2;
 
     //////////////////////////////////////////////////
     //////////////////////////////////////////////////
@@ -170,12 +170,15 @@ public class ClockWidgetSettings
         String s = prefs.getString(prefs_prefix + PREF_KEY_APPEARANCE_WIDGETMODE_CLOCK + suffix, defaultValue);
         return (s != null ? s : defaultValue);
     }
+    public static String getClockModeDefault(Context context, int appWidgetId) {
+        return (context != null ? context.getString(R.string.def_appwidget_0_appearance_widgetmode_clock) : PREF_DEF_APPEARANCE_WIDGETMODE_CLOCK1x1.name());
+    }
 
     //////////////////////////////////////////////////
 
     public static WidgetModeClock1x1 loadClock1x1ModePref(Context context, int appWidgetId)
     {
-        String modeString = loadClockModePref(context, appWidgetId, MODE_1x1, PREF_DEF_APPEARANCE_WIDGETMODE_CLOCK1x1.name());
+        String modeString = loadClockModePref(context, appWidgetId, MODE_1x1, getClockModeDefault(context, appWidgetId));
         WidgetModeClock1x1 widgetMode;
         try {
             widgetMode = WidgetModeClock1x1.valueOf(modeString);
