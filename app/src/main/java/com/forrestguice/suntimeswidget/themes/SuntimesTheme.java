@@ -1238,7 +1238,10 @@ public class SuntimesTheme
         COLOR(-1, "Colour", true),
         DARK(R.drawable.bg_widget_dark, "Dark", false),
         LIGHT(R.drawable.bg_widget, "Light", false),
-        TRANSPARENT(android.R.color.transparent, "Transparent", false);
+        TRANSPARENT(android.R.color.transparent, "Transparent", false),
+        DARK_MONET(R.drawable.monet_bg_widget_dark, "Dark (Material)", false),
+        LIGHT_MONET(R.drawable.monet_bg_widget_light, "Light (Material)", false),
+        ;
 
         private final int resID;
         private String displayString;

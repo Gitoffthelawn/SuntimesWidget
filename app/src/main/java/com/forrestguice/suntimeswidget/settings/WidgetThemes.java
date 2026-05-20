@@ -46,11 +46,13 @@ import java.util.Set;
 
 import com.forrestguice.annotation.NonNull;
 import com.forrestguice.annotation.Nullable;
+import com.forrestguice.suntimeswidget.BuildConfig;
 import com.forrestguice.suntimeswidget.R;
 import com.forrestguice.suntimeswidget.SuntimesUtils;
 import com.forrestguice.suntimeswidget.calculator.settings.display.MoonPhaseDisplay;
 import com.forrestguice.suntimeswidget.calculator.settings.display.TimeDateDisplay;
 import com.forrestguice.suntimeswidget.themes.defaults.DarkTheme1;
+import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeMonet;
 import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeTranslucent;
 import com.forrestguice.suntimeswidget.themes.SuntimesTheme;
 import com.forrestguice.suntimeswidget.themes.SuntimesTheme.ThemeDescriptor;
@@ -59,6 +61,7 @@ import com.forrestguice.suntimeswidget.themes.defaults.DarkTheme;
 import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeTrans;
 import com.forrestguice.suntimeswidget.themes.defaults.LightTheme;
 import com.forrestguice.suntimeswidget.themes.defaults.LightTheme1;
+import com.forrestguice.suntimeswidget.themes.defaults.LightThemeMonet;
 import com.forrestguice.suntimeswidget.themes.defaults.LightThemeTrans;
 import com.forrestguice.suntimeswidget.views.SpanUtils;
 import com.forrestguice.util.android.AndroidResources;
@@ -96,6 +99,8 @@ public class WidgetThemes
                 DarkThemeTranslucent.themeDescriptor(context),     // 4
                 DarkTheme1.themeDescriptor(context),               // 5
                 LightTheme1.themeDescriptor(context),              // 6
+                DarkThemeMonet.themeDescriptor(context),           // 7
+                LightThemeMonet.themeDescriptor(context),          // 8
         };
         Class<?>[] defThemeClasses = new Class[] {
                 LightTheme.class,                                  // 0
@@ -105,6 +110,8 @@ public class WidgetThemes
                 DarkThemeTranslucent.class,                        // 4
                 DarkTheme1.class,                                  // 5
                 LightTheme1.class,                                 // 6
+                DarkThemeMonet.class,                              // 7
+                LightThemeMonet.class,                             // 8
         };
 
         defaultThemes.clear();

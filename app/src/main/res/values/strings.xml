@@ -786,6 +786,8 @@
     <string name="themes_widgetThemes_light_transparent">Light (transparent)</string>    <!-- default widget theme name -->
     <string name="themes_widgetThemes_dark1">Dark (legacy)</string>                                <!-- default widget theme name -->
     <string name="themes_widgetThemes_light1">Light (legacy)</string>                              <!-- default widget theme name -->
+    <string name="themes_widgetThemes_dark_monet">Dark (Material)</string>                 <!-- default widget theme name -->
+    <string name="themes_widgetThemes_light_monet">Light (Material)</string>               <!-- default widget theme name -->
 
     <string name="themes_addtheme_custname" tools:common="true">theme_<xliff:g id="#">%1$s</xliff:g></string>                                        <!-- suggested new theme id -->
     <string name="themes_addtheme_copyname" tools:common="true"><xliff:g id="themeName">%1$s</xliff:g>_<xliff:g id="#">%2$s</xliff:g></string>   <!-- copied theme id -->
