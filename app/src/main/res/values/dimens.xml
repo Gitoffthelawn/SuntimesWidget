@@ -6,7 +6,8 @@
     <dimen name="dialog_margin1">4dp</dimen>
     <dimen name="tooltip_margin0">8dp</dimen>
 
-    <dimen name="widget_radius">28dp</dimen>
+    <dimen name="material_widget_radius">28dp</dimen>
+
     <dimen name="fab_radius">12dp</dimen>
     <dimen name="tooltip_radius">4dp</dimen>
     <dimen name="toast_radius">28dp</dimen>
