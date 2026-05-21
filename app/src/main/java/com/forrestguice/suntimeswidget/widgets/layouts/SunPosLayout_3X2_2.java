@@ -153,7 +153,7 @@ public class SunPosLayout_3X2_2 extends SunPosLayout
         super.themeViews(context, views, theme);
         options = new LightGraphOptions(AndroidResources.wrap(context));
 
-        options.colors = LightGraphColorValues.getColorDefaults(AndroidResources.wrap(context), (theme.getBackground() == SuntimesTheme.ThemeBackground.DARK));
+        options.colors = LightGraphColorValues.getColorDefaults(AndroidResources.wrap(context), (theme.getBackground() == SuntimesTheme.ThemeBackground.DARK_HOLO));
         options.colors.setColor(COLOR_DAY, theme.getDayColor());
         options.colors.setColor(COLOR_CIVIL, theme.getCivilColor());
         options.colors.setColor(COLOR_NAUTICAL, theme.getNauticalColor());

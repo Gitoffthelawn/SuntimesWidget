@@ -156,7 +156,7 @@ public class SunPosLayout_3X1_0 extends SunPosLayout
         }
 
         colors = new LightMapOptions();
-        if (theme.getBackground() == SuntimesTheme.ThemeBackground.LIGHT)
+        if (theme.getBackground() == SuntimesTheme.ThemeBackground.LIGHT_HOLO)
             colors.initDefaultLight(AndroidResources.wrap(context));
         else colors.initDefaultDark(AndroidResources.wrap(context));
 

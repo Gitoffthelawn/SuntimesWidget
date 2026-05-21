@@ -386,6 +386,7 @@ public class SuntimesTheme
                 } catch (IllegalArgumentException e) {
                     Log.w("initTheme", "unable to find theme background " + backgroundName);
                     this.themeBackground = ThemeBackground.DARK;
+                    this.themeBackground = ThemeBackground.DARK_HOLO;
                 }
             }
         } catch (ClassCastException e) {
@@ -1236,10 +1237,10 @@ public class SuntimesTheme
     public enum ThemeBackground
     {
         COLOR(-1, "Colour", true),
-        DARK(R.drawable.bg_widget_dark, "Dark", false),
-        LIGHT(R.drawable.bg_widget, "Light", false),
         TRANSPARENT(android.R.color.transparent, "Transparent", false),
+        DARK_HOLO(R.drawable.bg_widget_dark, "Dark (Holo)", false),
         DARK_MONET(R.drawable.monet_bg_widget_dark, "Dark (Material)", false),
+        LIGHT_HOLO(R.drawable.bg_widget, "Light (Holo)", false),
         LIGHT_MONET(R.drawable.monet_bg_widget_light, "Light (Material)", false),
         ;
 
@@ -1280,8 +1281,8 @@ public class SuntimesTheme
 
         public static void initDisplayStrings( Context context )
         {
-            DARK.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_dark));
-            LIGHT.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_light));
+            DARK_HOLO.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_dark));
+            LIGHT_HOLO.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_light));
             TRANSPARENT.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_trans));
             COLOR.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_color));
         }
@@ -1298,7 +1299,7 @@ public class SuntimesTheme
                     return backgrounds[i];
                 }
             }
-            return ThemeBackground.DARK;
+            return ThemeBackground.DARK_HOLO;
         }
     }
 

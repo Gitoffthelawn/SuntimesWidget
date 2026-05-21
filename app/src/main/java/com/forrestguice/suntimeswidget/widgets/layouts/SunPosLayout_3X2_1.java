@@ -130,7 +130,7 @@ public class SunPosLayout_3X2_1 extends SunPosLayout
         super.themeViews(context, views, theme);
         AndroidResources resources = AndroidResources.wrap(context);
         options = new LineGraphOptions(resources);
-        if (theme.getBackground() == SuntimesTheme.ThemeBackground.LIGHT)
+        if (theme.getBackground() == SuntimesTheme.ThemeBackground.LIGHT_HOLO)
             options.initDefaultLight(resources);
         else options.initDefaultDark(resources);
 
