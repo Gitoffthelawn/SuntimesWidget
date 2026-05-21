@@ -51,7 +51,7 @@ public abstract class SunPosLayout extends PositionLayout
 
     protected boolean scaleBase = WidgetSettings.PREF_DEF_APPEARANCE_SCALEBASE;
 
-    public void prepareForUpdate(Context context, int appWidgetId, SuntimesRiseSetDataset dataset, int[] widgetSize)
+    public void prepareForUpdate(Context context, int appWidgetId, SuntimesRiseSetDataset dataset, @Nullable int[] widgetSize)
     {
         this.scaleBase = WidgetSettings.loadScaleBasePref(context, appWidgetId);
         dataset.calculateData(context);
