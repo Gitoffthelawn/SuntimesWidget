@@ -385,7 +385,6 @@ public class SuntimesTheme
                     this.themeBackground = ThemeBackground.valueOf(backgroundName);
                 } catch (IllegalArgumentException e) {
                     Log.w("initTheme", "unable to find theme background " + backgroundName);
-                    this.themeBackground = ThemeBackground.DARK;
                     this.themeBackground = ThemeBackground.DARK_HOLO;
                 }
             }
@@ -1237,10 +1236,23 @@ public class SuntimesTheme
     public enum ThemeBackground
     {
         COLOR(-1, "Colour", true),
+
         DARK_HOLO(R.drawable.bg_widget_dark, "Dark (Holo)", false),
+
+        DARK_MD2(R.drawable.md2_bg_widget_dark, "Dark (MD2)", false),
+        DARK_MD2_T(R.drawable.md2_bg_widget_dark_t, "Dark (MD2) (T)", false),
+
         DARK_MONET(R.drawable.monet_bg_widget_dark, "Dark (Material)", false),
+        DARK_MONET_T(R.drawable.monet_bg_widget_dark_t, "Dark (Material) (T)", false),
+
         LIGHT_HOLO(R.drawable.bg_widget, "Light (Holo)", false),
+
+        LIGHT_MD2(R.drawable.md2_bg_widget_light, "Light (MD2)", false),
+        LIGHT_MD2_T(R.drawable.md2_bg_widget_light_t, "Light (MD2) (T)", false),
+
         LIGHT_MONET(R.drawable.monet_bg_widget_light, "Light (Material)", false),
+        LIGHT_MONET_T(R.drawable.monet_bg_widget_light_t, "Light (Material) (T)", false),
+
         TRANSPARENT(R.drawable.bg_widget_trans, "Transparent", false),
         ;
 
@@ -1282,9 +1294,17 @@ public class SuntimesTheme
         public static void initDisplayStrings( Context context )
         {
             DARK_HOLO.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_dark));
+            DARK_MONET.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_dark_monet));
+            DARK_MONET_T.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_dark_monet_t));
+
             LIGHT_HOLO.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_light));
+            LIGHT_MONET.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_light_monet));
+            LIGHT_MONET_T.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_light_monet_t));
+
             TRANSPARENT.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_trans));
             COLOR.setDisplayString(context.getString(R.string.themes_configLabel_themeBackground_color));
+
+            // TODO: i18n monet
         }
 
         @NonNull

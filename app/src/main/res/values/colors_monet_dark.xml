@@ -7,7 +7,7 @@
     <color name="monet_dark_dialog_bg" />
     <color name="monet_dark_dialog_bg_alt" />
     <color name="monet_dark_card_bg">@color/card_bg_contrast_dark</color>
-    <color name="monet_dark_card_bg_trans" />
+    <color name="monet_dark_card_bg_trans">@color/card_bg_darktrans</color>
     <color name="monet_dark_chip_bg_disabled" />
     <color name="monet_dark_chip_bg_disabled_stroke" />
     <color name="monet_dark_chip_bg_enabled" />

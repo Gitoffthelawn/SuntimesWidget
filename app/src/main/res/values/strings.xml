@@ -780,14 +780,21 @@
     <string name="themes_action_importThemes">@string/action_import</string>    <!-- button (contentDescription) -->
 
     <string name="themes_widgetThemes_dark">Dark</string>                                <!-- default widget theme name -->
+    <string name="themes_widgetThemes_dark1">Dark (legacy)</string>                                <!-- default widget theme name -->
     <string name="themes_widgetThemes_dark_transparent">Dark (transparent)</string>      <!-- default widget theme name -->
     <string name="themes_widgetThemes_dark_translucent">Dark (translucent)</string>      <!-- default widget theme name -->
+    <string name="themes_widgetThemes_dark_md2">Dark (MD2)</string>                 <!-- default widget theme name -->
+    <string name="themes_widgetThemes_dark_md2_translucent">Dark (MD2) (T)</string>                 <!-- default widget theme name -->
+    <string name="themes_widgetThemes_dark_md3">Dark (Material)</string>               <!-- default widget theme name -->
+    <string name="themes_widgetThemes_dark_md3_translucent">Dark (Material) (T)</string>                 <!-- default widget theme name -->
+
     <string name="themes_widgetThemes_light">Light</string>                              <!-- default widget theme name -->
     <string name="themes_widgetThemes_light_transparent">Light (transparent)</string>    <!-- default widget theme name -->
-    <string name="themes_widgetThemes_dark1">Dark (legacy)</string>                                <!-- default widget theme name -->
     <string name="themes_widgetThemes_light1">Light (legacy)</string>                              <!-- default widget theme name -->
-    <string name="themes_widgetThemes_dark_monet">Dark (Material)</string>                 <!-- default widget theme name -->
-    <string name="themes_widgetThemes_light_monet">Light (Material)</string>               <!-- default widget theme name -->
+    <string name="themes_widgetThemes_light_md2">Light (MD2)</string>                 <!-- default widget theme name -->
+    <string name="themes_widgetThemes_light_md2_translucent">Light (MD2) (T)</string>                 <!-- default widget theme name -->
+    <string name="themes_widgetThemes_light_md3">Light (Material)</string>               <!-- default widget theme name -->
+    <string name="themes_widgetThemes_light_md3_translucent">Light (Material) (T)</string>               <!-- default widget theme name -->
 
     <string name="themes_addtheme_custname" tools:common="true">theme_<xliff:g id="#">%1$s</xliff:g></string>                                        <!-- suggested new theme id -->
     <string name="themes_addtheme_copyname" tools:common="true"><xliff:g id="themeName">%1$s</xliff:g>_<xliff:g id="#">%2$s</xliff:g></string>   <!-- copied theme id -->
@@ -816,7 +823,11 @@
 
     <string name="themes_configLabel_themeBackgroundId">Base:</string>    <!-- spinner label -->
     <string name="themes_configLabel_themeBackground_light">Light (Holo)</string>        <!-- light background -->    <!-- TODO -->
+    <string name="themes_configLabel_themeBackground_light_monet">Light (Monet)</string>  <!-- light material background-->   <!-- TODO -->
+    <string name="themes_configLabel_themeBackground_light_monet_t">Light (Monet) (T)</string>  <!-- light material background-->   <!-- TODO -->
     <string name="themes_configLabel_themeBackground_dark">Dark (Holo)</string>          <!-- dark background -->    <!-- TODO -->
+    <string name="themes_configLabel_themeBackground_dark_monet">Dark (Monet)</string>  <!-- dark material background -->   <!-- TODO -->
+    <string name="themes_configLabel_themeBackground_dark_monet_t">Dark (Monet) (T)</string>  <!-- dark material background -->   <!-- TODO -->
     <string name="themes_configLabel_themeBackground_trans">Transparent</string>  <!-- transparent background -->
     <string name="themes_configLabel_themeBackground_color">Colour</string>      <!-- custom background -->
     <string name="themes_configLabel_themeColorBackground">Colour</string>      <!-- color label -->
