@@ -3827,6 +3827,7 @@ public class SuntimesConfigActivity0 extends AppCompatActivity
 
             } else if (widgetLayout instanceof SunPosLayout) {
                 SuntimesRiseSetDataset dataset = SuntimesWidget2.createDataset(context, appWidgetId);
+                ((SunPosLayout) widgetLayout).prepareForUpdate(context, appWidgetId, dataset, null);
                 RemoteViews remoteViews = SuntimesWidget2.createRemoteViews(context, appWidgetId, dataset, (SunPosLayout) widgetLayout);
                 modifyRemoteViews(remoteViews);
                 preview.updateAppWidget(context, appWidgetId, remoteViews);
