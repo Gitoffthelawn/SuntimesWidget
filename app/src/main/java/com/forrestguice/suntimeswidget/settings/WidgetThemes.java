@@ -46,13 +46,15 @@ import java.util.Set;
 
 import com.forrestguice.annotation.NonNull;
 import com.forrestguice.annotation.Nullable;
-import com.forrestguice.suntimeswidget.BuildConfig;
 import com.forrestguice.suntimeswidget.R;
 import com.forrestguice.suntimeswidget.SuntimesUtils;
 import com.forrestguice.suntimeswidget.calculator.settings.display.MoonPhaseDisplay;
 import com.forrestguice.suntimeswidget.calculator.settings.display.TimeDateDisplay;
 import com.forrestguice.suntimeswidget.themes.defaults.DarkTheme1;
-import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeMonet;
+import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeMD2;
+import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeMD2T;
+import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeMD3;
+import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeMD3T;
 import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeTranslucent;
 import com.forrestguice.suntimeswidget.themes.SuntimesTheme;
 import com.forrestguice.suntimeswidget.themes.SuntimesTheme.ThemeDescriptor;
@@ -61,7 +63,10 @@ import com.forrestguice.suntimeswidget.themes.defaults.DarkTheme;
 import com.forrestguice.suntimeswidget.themes.defaults.DarkThemeTrans;
 import com.forrestguice.suntimeswidget.themes.defaults.LightTheme;
 import com.forrestguice.suntimeswidget.themes.defaults.LightTheme1;
-import com.forrestguice.suntimeswidget.themes.defaults.LightThemeMonet;
+import com.forrestguice.suntimeswidget.themes.defaults.LightThemeMD2;
+import com.forrestguice.suntimeswidget.themes.defaults.LightThemeMD2T;
+import com.forrestguice.suntimeswidget.themes.defaults.LightThemeMD3;
+import com.forrestguice.suntimeswidget.themes.defaults.LightThemeMD3T;
 import com.forrestguice.suntimeswidget.themes.defaults.LightThemeTrans;
 import com.forrestguice.suntimeswidget.views.SpanUtils;
 import com.forrestguice.util.android.AndroidResources;
@@ -99,8 +104,14 @@ public class WidgetThemes
                 DarkThemeTranslucent.themeDescriptor(context),     // 4
                 DarkTheme1.themeDescriptor(context),               // 5
                 LightTheme1.themeDescriptor(context),              // 6
-                DarkThemeMonet.themeDescriptor(context),           // 7
-                LightThemeMonet.themeDescriptor(context),          // 8
+                DarkThemeMD3.themeDescriptor(context),           // 7
+                LightThemeMD3.themeDescriptor(context),          // 8
+                DarkThemeMD3T.themeDescriptor(context),           // 9
+                LightThemeMD3T.themeDescriptor(context),          // 10
+                DarkThemeMD2.themeDescriptor(context),           // 11
+                LightThemeMD2.themeDescriptor(context),           // 12
+                DarkThemeMD2T.themeDescriptor(context),           // 13
+                LightThemeMD2T.themeDescriptor(context),           // 14
         };
         Class<?>[] defThemeClasses = new Class[] {
                 LightTheme.class,                                  // 0
@@ -110,8 +121,14 @@ public class WidgetThemes
                 DarkThemeTranslucent.class,                        // 4
                 DarkTheme1.class,                                  // 5
                 LightTheme1.class,                                 // 6
-                DarkThemeMonet.class,                              // 7
-                LightThemeMonet.class,                             // 8
+                DarkThemeMD3.class,                              // 7
+                LightThemeMD3.class,                             // 8
+                DarkThemeMD3T.class,                              // 9
+                LightThemeMD3T.class,                             // 10
+                DarkThemeMD2.class,                              // 11
+                LightThemeMD2.class,                              // 12
+                DarkThemeMD2T.class,                              // 13
+                LightThemeMD2T.class,                              // 14
         };
 
         defaultThemes.clear();

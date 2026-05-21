@@ -25,9 +25,9 @@ import com.forrestguice.suntimeswidget.BuildConfig;
 import com.forrestguice.suntimeswidget.R;
 import com.forrestguice.support.content.ContextCompat;
 
-public class DarkThemeMonet extends DarkTheme1
+public class DarkThemeMD3 extends DarkTheme1
 {
-    public static final String THEMEDEF_NAME = "darkmonet";
+    public static final String THEMEDEF_NAME = "darkmd3";
     public static final int THEMEDEF_VERSION = BuildConfig.VERSION_CODE;
     private static ThemeDescriptor THEMEDEF_DESCRIPTOR = null;
 
@@ -38,16 +38,16 @@ public class DarkThemeMonet extends DarkTheme1
     public static final float THEMEDEF_TITLESIZE = 14;
     public static final float THEMEDEF_TEXTSIZE = 14;
     public static final float THEMEDEF_TIMESIZE = 16;
-    public static final float THEMEDEF_TIMESUFFIXSIZE = 10;
+    public static final float THEMEDEF_TIMESUFFIXSIZE = 8;
 
-    public DarkThemeMonet(Context context)
+    public DarkThemeMD3(Context context)
     {
         super(context);
 
         this.themeVersion = THEMEDEF_VERSION;
         this.themeName = THEMEDEF_NAME;
         this.themeIsDefault = true;
-        this.themeDisplayString = context.getString(R.string.themes_widgetThemes_dark_monet);
+        this.themeDisplayString = context.getString(R.string.themes_widgetThemes_dark_md3);
 
         this.themeBackground = THEMEDEF_BACKGROUND;
         this.themeBackgroundColor = ContextCompat.getColor(context, THEMEDEF_BACKGROUND_COLOR_ID);
@@ -67,7 +67,7 @@ public class DarkThemeMonet extends DarkTheme1
     public static ThemeDescriptor themeDescriptor(Context context)
     {
         if (THEMEDEF_DESCRIPTOR == null) {
-            THEMEDEF_DESCRIPTOR = new ThemeDescriptor(THEMEDEF_NAME, context.getString(R.string.themes_widgetThemes_dark_monet), THEMEDEF_VERSION, THEMEDEF_BACKGROUND.name(), Color.DKGRAY);
+            THEMEDEF_DESCRIPTOR = new ThemeDescriptor(THEMEDEF_NAME, context.getString(R.string.themes_widgetThemes_dark_md3), THEMEDEF_VERSION, THEMEDEF_BACKGROUND.name(), Color.DKGRAY);
         }
         return THEMEDEF_DESCRIPTOR;
     }
