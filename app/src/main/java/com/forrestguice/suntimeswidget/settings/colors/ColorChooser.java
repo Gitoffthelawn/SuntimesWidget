@@ -458,8 +458,8 @@ public class ColorChooser implements View.OnFocusChangeListener
         @Override
         public void onColorChanged(int color)
         {
-            setColor(color);
-            ColorChooser.this.onColorChanged(getColor());
+            //setColor(color);
+            //ColorChooser.this.onColorChanged(getColor());
         }
 
         @Override
