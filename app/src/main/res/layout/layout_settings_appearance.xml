@@ -68,7 +68,7 @@
         </LinearLayout>
 
 
-            <com.forrestguice.support.constraint.ConstraintLayout android:visibility="visible"
+            <com.forrestguice.support.constraint.ConstraintLayout android:visibility="gone"
                 android:id="@+id/appwidget_appearance_typeface_group"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
                 tools:ignore="MissingConstraints"
