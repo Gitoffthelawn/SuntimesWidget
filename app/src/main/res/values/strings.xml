@@ -789,6 +789,7 @@
     <string name="themes_widgetThemes_dark_md3">Dark (Material)</string>               <!-- default widget theme name -->
     <string name="themes_widgetThemes_dark_md3_translucent">Dark (Material) [T]</string>                 <!-- default widget theme name -->
 
+    <string name="themes_widgetThemes_sys_md2">System (MD2)</string>               <!-- default widget theme name -->
     <string name="themes_widgetThemes_sys_md3">System (Material)</string>               <!-- default widget theme name -->
 
     <string name="themes_widgetThemes_light">Light</string>                              <!-- default widget theme name -->

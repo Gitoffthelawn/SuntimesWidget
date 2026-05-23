@@ -1249,6 +1249,7 @@ public class SuntimesTheme
         LIGHT_MONET(R.drawable.monet_bg_widget_light, "Light (Material)", false),
         LIGHT_MONET_T(R.drawable.monet_bg_widget_light_t, "Light (Material) (T)", false),
 
+        SYSTEM_MD2(R.drawable.md2_bg_widget_sys, "System (MD2)", false),
         SYSTEM_MONET(R.drawable.monet_bg_widget_sys, "System (Material)", false),
 
         TRANSPARENT(R.drawable.bg_widget_trans, "Transparent", false),

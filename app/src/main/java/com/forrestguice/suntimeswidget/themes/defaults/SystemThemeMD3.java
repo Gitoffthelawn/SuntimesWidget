@@ -25,7 +25,7 @@ import com.forrestguice.suntimeswidget.BuildConfig;
 import com.forrestguice.suntimeswidget.R;
 import com.forrestguice.support.content.ContextCompat;
 
-public class SystemThemeMD3 extends DarkThemeMD3
+public class SystemThemeMD3 extends SystemThemeMD2
 {
     public static final String THEMEDEF_NAME = "sysmd3";
     public static final int THEMEDEF_VERSION = BuildConfig.VERSION_CODE;
@@ -34,13 +34,11 @@ public class SystemThemeMD3 extends DarkThemeMD3
     public static final ThemeBackground THEMEDEF_BACKGROUND = ThemeBackground.SYSTEM_MONET;
     public static final int THEMEDEF_BACKGROUND_COLOR_ID = R.color.monet_card_bg;
 
+
     public SystemThemeMD3(Context context)
     {
         super(context);
-
-        this.themeVersion = THEMEDEF_VERSION;
         this.themeName = THEMEDEF_NAME;
-        this.themeIsDefault = true;
         this.themeDisplayString = context.getString(R.string.themes_widgetThemes_sys_md3);
 
         this.themeBackground = THEMEDEF_BACKGROUND;

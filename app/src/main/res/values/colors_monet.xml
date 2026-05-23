@@ -5,8 +5,8 @@
     <color name="monet_dialog_frame" />
     <color name="monet_dialog_bg" />
     <color name="monet_dialog_bg_alt" />
-    <color name="monet_card_bg" />
-    <color name="monet_card_bg_trans" />
+    <color name="monet_card_bg">@color/card_bg_light</color>
+    <color name="monet_card_bg_trans">@color/card_bg_lighttrans</color>
     <color name="monet_chip_bg_disabled" />
     <color name="monet_chip_bg_disabled_stroke" />
     <color name="monet_chip_bg_enabled" />

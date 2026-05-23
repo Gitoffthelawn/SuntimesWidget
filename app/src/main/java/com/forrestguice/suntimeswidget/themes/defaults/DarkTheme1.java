@@ -25,7 +25,7 @@ import com.forrestguice.support.content.ContextCompat;
 import com.forrestguice.suntimeswidget.BuildConfig;
 import com.forrestguice.suntimeswidget.R;
 
-public class DarkTheme1 extends  DarkTheme
+public class DarkTheme1 extends DarkTheme
 {
     public static final String THEMEDEF_NAME = "dark1";
     public static final int THEMEDEF_VERSION = BuildConfig.VERSION_CODE;
