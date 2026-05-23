@@ -1,5 +1,23 @@
 ### ~
 
+### v0.17.2 (2026-05-23)
+* adds "material widget" themes: `Dark/Light/System (MD2)`, and `Dark/Light/System (Material)` themes (#934); renames legacy themes to `Dark/Light (Holo)`.
+* adds typeface options to the clock widget; color, font-family, bold, italic, outline, and cutout options.
+* fixes broken alarm list widgets (#949).
+* fixes misc `Material You` style issues (alert-dialog, action-mode, and status-bar colors).
+* fixes bug where "alert dialog icons are unreadable when using light themes".
+* fixes bug "app crash when dialog is dismissed before fully shown".
+* fixes bug where widget previews are broken when using the layout selector.
+* fixes bug where color chooser changes color after the dialog is canceled.
+* fixes bug where transparent widgets are missing their pressed appearance.
+* enhances alarm offset picker to allow finer control (no longer limited to 5m intervals).
+* enhances alarm edit UI; hides chips when options aren't supported; show simplified dialogs when options have limited support.
+* changes default widget theme to `Dark (Material)`; changes default clock widget to `clock2`.
+* refactors sun widget layouts; tweaks widget scaling to accommodate material widgets.
+* build: adds `suntimes.localization.plugin`; adds gradle tasks (`processTranslations`, `updateTranslations`).
+* updates translation to French (fr) (#944, #948, #951 by chfo-bidouille).
+* updates translation to Brazilian Portuguese (pt-br) (#950 by naoliv).
+
 ### v0.17.1 (2026-04-22)
 * fixes broken moon widgets ("problem loading widget") (#931).
 * fixes app crash when dragging world map timeline (#935).
