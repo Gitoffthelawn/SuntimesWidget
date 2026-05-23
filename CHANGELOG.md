@@ -1,6 +1,7 @@
 ### ~
 
 ### v0.17.2 (2026-05-23)
+* fixes broken alarm list widgets (#949).
 * fixes misc `Material You` style issues (alert-dialog, action-mode, and status-bar colors).
 * fixes bug where "dialog icons are unreadable when using light themes".
 * fixes "app crash when dialog is dismissed before fully shown".

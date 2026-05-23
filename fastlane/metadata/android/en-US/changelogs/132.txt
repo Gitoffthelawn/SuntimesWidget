@@ -1,6 +1,7 @@
 Attention: v0.17.0+ breaks older widget installations (#932).
 When updating from previous versions your home screen widgets may be removed and will need to be re-added.
 
+- fixes broken alarm list widgets (#949).
 - fixes misc `Material You` style issues.
 - updates translation to French.
 - updates translation to Portuguese.
