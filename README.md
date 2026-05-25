@@ -202,7 +202,7 @@ Libraries used:
 
 ## Project Contributions
 
-German translation by <u>Henrik "HerHde" Hüttemann</u>, <u>Wolkenschieber</u>, <u>xnumad</u>, and <u>CSTRSK</u>.<br/>
+German translation by <u>Henrik "HerHde" Hüttemann</u>, <u>Wolkenschieber</u>, <u>xnumad</u>, <u>CSTRSK</u> and <u>Wuzzy</u>.<br/>
 Polish and Esperanto translations by <u>Verdulo</u>.<br/>
 French translation by <u>Jej</u>, <u>Aloha</u>, <u>ldmpub</u>, <u>grenagit</u>, and <u>chfo-bidouille</u>.<br/>
 Hungarian translation by <u>Erci</u>.<br/>
