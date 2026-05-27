@@ -869,7 +869,7 @@
   <string name="event_sunevent_title">Sonne</string>                   <!-- (custom) sun event title; e.g. "Sun 6°" -->
   <string name="event_sunevent_title_format">%1$s %2$s</string>      <!-- (custom) sun event title; e.g. "Sun 6°" -->
   <string name="event_sunevent_summary_format"><xliff:g id="title">%1$s</xliff:g> bei <xliff:g id="angle">%2$s</xliff:g></string>    <!-- (custom) sun event summary; e.g. "Sun 6°" -->
-  <string name="event_sunevent_phrase_gender">andere</string>         <!-- either 'other' or 'female' (SelectFormat api) -->
+  <string name="event_sunevent_phrase_gender">other</string>         <!-- either 'other' or 'female' (SelectFormat api) -->
 
   <string name="event_shadowevent_title">Schatten</string>                   <!-- (custom) shadow length event title; e.g. "Shadow 6m" -->
 
@@ -996,7 +996,7 @@
   <string name="alarmOption_ringtone_none">Kein Ton</string>          <!-- ringtone label (none)   -->
   <string name="alarmOption_ringtone_ringtone">Klingelton</string>          <!-- menu item; Select a "Ringtone" -->
   <string name="alarmOption_ringtone_file">Audiodatei</string>          <!-- menu item; Select an "Audio File" -->
-  <string name="alarmOption_ringtone_label"><xliff:g id="icon">[Icon]</xliff:g> <xliff:g id="name">%1$s</xliff:g></string>  <!-- ringtone label format -->
+  <string name="alarmOption_ringtone_label"><xliff:g id="icon">[icon]</xliff:g> <xliff:g id="name">%1$s</xliff:g></string>  <!-- ringtone label format -->
   <string name="alarmOption_solarevent_none">Uhrzeit</string>          <!-- ringtone label (none)   -->
 
   <string name="alarmOption_repeat">Wiederholen</string>                <!-- checkbox text; an alarm that repeats -->
@@ -1007,8 +1007,7 @@
   <string name="alarmdelete_dialog_message">Soll <xliff:g id="type">%1$s</xliff:g> um <xliff:g id="time">%2$s</xliff:g> (<xliff:g id="event">%3$s</xliff:g>) gelöscht werden?</string>   <!-- dialog msg -->
   <string name="alarmdelete_dialog_ok">Löschen</string>        <!-- button -->
   <string name="alarmdelete_dialog_cancel">Abbrechen</string>    <!-- button -->
-  <string name="alarmdelete_toast_success"><xliff:g example="Benachrichtigung" id="type">%1$s
-  </xliff:g> bei <xliff:g id="time">%2$s</xliff:g> (<xliff:g id="event">%3$s</xliff:g>) wurde gelöscht.</string> <!-- toast msg -->
+  <string name="alarmdelete_toast_success"><xliff:g example="Benachrichtigung" id="type">%1$s</xliff:g> bei <xliff:g id="time">%2$s</xliff:g> (<xliff:g id="event">%3$s</xliff:g>) wurde gelöscht.</string> <!-- toast msg -->
 
   <string name="discardchanges_dialog_message">Es gibt ungespeicherte Änderungen</string>      <!-- dialog message -->
   <string name="discardchanges_dialog_ok">Verwerfen</string>                              <!--   button -->
