@@ -773,7 +773,7 @@
   <string name="themes_configLabel_themeColorGraphMoonPathDayFill">Mondweg (Füllung Tag)</string>         <!-- color label -->
   <string name="themes_configLabel_themeColorGraphMoonPathDayStroke">Mondweg (Strich Tag)</string>         <!-- color label -->
   <string name="themes_configLabel_themeColorGraphMoonPathNightFill">Mondweg (Füllung Nacht)</string>         <!-- color label -->
-  <string name="themes_configLabel_themeColorGraphMoonPathNightStroke">Mondweg (Strich Nacht)<string>         <!-- color label -->
+  <string name="themes_configLabel_themeColorGraphMoonPathNightStroke">Mondweg (Strich Nacht)</string>         <!-- color label -->
 
   <string name="themes_configLabel_themeColorGraphPointFill">Punkte (Füllung)</string>         <!-- color label -->
   <string name="themes_configLabel_themeColorGraphPointStroke">Punkte (Strich)</string>         <!-- color label -->
