@@ -36,9 +36,9 @@
     <drawable name="ic_action_location_found_ref">@drawable/ic_action_location_found_light</drawable>
     <drawable name="ic_action_location_off_ref">@drawable/ic_action_location_off_light</drawable>
     <drawable name="ic_action_location_searching_ref">@drawable/ic_action_location_searching_light</drawable>
-    <drawable name="ic_satellite_ref">@drawable/ic_satellite_light</drawable>
-    <drawable name="ic_network_ref">@drawable/ic_network_light</drawable>
-    <drawable name="ic_celltower_ref">@drawable/ic_celltower_light</drawable>
+    <drawable name="ic_action_satellite_ref">@drawable/ic_action_satellite_light</drawable>
+    <drawable name="ic_action_network_ref">@drawable/ic_action_network_light</drawable>
+    <drawable name="ic_action_celltower_ref">@drawable/ic_action_celltower_light</drawable>
 
     <drawable name="ic_action_place_ref">@drawable/ic_action_place_light</drawable>
     <drawable name="ic_action_map1_ref">@drawable/ic_action_map1_light</drawable>
@@ -50,7 +50,7 @@
     <drawable name="ic_action_alarms_ref">@drawable/ic_action_alarms_light</drawable>
     <drawable name="ic_action_home_ref">@drawable/ic_action_home_light</drawable>
     <drawable name="ic_action_bedtime_ref">@drawable/ic_action_bedtime_light</drawable>
-    <drawable name="ic_calendar_ref">@drawable/ic_calendar_light</drawable>
+    <drawable name="ic_action_calendar_ref">@drawable/ic_action_calendar_light</drawable>
     <drawable name="ic_action_notification_ref">@drawable/ic_action_notification_light</drawable>
     <drawable name="ic_action_notification1_ref">@drawable/ic_action_notification1_light</drawable>
     <drawable name="ic_action_notification2_ref">@drawable/ic_action_notification2_light</drawable>
@@ -62,7 +62,7 @@
     <drawable name="ic_action_error_ref">@drawable/ic_action_error_light</drawable>
     <drawable name="ic_action_widget_ref">@drawable/ic_action_widget_light</drawable>
     <drawable name="ic_action_events_ref">@drawable/ic_action_widget_light</drawable>  <!-- TODO -->
-    <drawable name="ic_palette_ref">@drawable/ic_palette_light</drawable>
+    <drawable name="ic_action_palette_ref">@drawable/ic_action_palette_light</drawable>
     <drawable name="ic_action_extension_ref">@drawable/ic_action_extension_light</drawable>
     <drawable name="baseline_terrain_ref_18">@drawable/baseline_terrain_black_18</drawable>
     <drawable name="ic_action_shadow_ref">@drawable/ic_action_shadow_light</drawable>

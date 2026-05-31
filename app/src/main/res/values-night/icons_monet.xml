@@ -37,7 +37,7 @@
     <drawable name="ic_action_time_ref1">@drawable/ic_action_time</drawable>
     <drawable name="ic_weather_sunny_ref1">@drawable/ic_weather_sunny</drawable>
     <drawable name="ic_action_alarms_ref1">@drawable/ic_action_alarms</drawable>
-    <drawable name="ic_calendar_ref1">@drawable/ic_calendar</drawable>
+    <drawable name="ic_calendar_ref1">@drawable/ic_action_calendar</drawable>
     <drawable name="ic_action_notification_ref1">@drawable/ic_action_notification</drawable>
     <drawable name="ic_action_vibration_ref1">@drawable/ic_action_vibration</drawable>
     <drawable name="ic_action_soundenabled_ref1">@drawable/ic_action_soundenabled</drawable>
@@ -46,7 +46,7 @@
     <drawable name="ic_action_warning_ref1">@drawable/ic_action_warning</drawable>
     <drawable name="ic_action_error_ref1">@drawable/ic_action_error</drawable>
     <drawable name="ic_action_widget_ref1">@drawable/ic_action_widget</drawable>
-    <drawable name="ic_palette_ref1">@drawable/ic_palette</drawable>
+    <drawable name="ic_palette_ref1">@drawable/ic_action_palette</drawable>
     <drawable name="ic_action_extension_ref1">@drawable/ic_action_extension</drawable>
     <drawable name="baseline_terrain_ref1_18">@drawable/baseline_terrain_white_18</drawable>
     <drawable name="ic_action_shadow_ref1">@drawable/ic_action_shadow</drawable>
