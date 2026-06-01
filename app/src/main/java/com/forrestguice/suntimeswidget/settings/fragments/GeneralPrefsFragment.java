@@ -46,6 +46,7 @@ import com.forrestguice.suntimeswidget.calculator.core.SuntimesCalculator;
 import com.forrestguice.suntimeswidget.calculator.settings.TimeFormatMode;
 import com.forrestguice.suntimeswidget.calculator.settings.display.TimeDateDisplay;
 import com.forrestguice.suntimeswidget.settings.AppSettings;
+import com.forrestguice.suntimeswidget.settings.HelpPreference;
 import com.forrestguice.suntimeswidget.settings.SettingsActivityInterface;
 import com.forrestguice.suntimeswidget.settings.SummaryListPreference;
 import com.forrestguice.suntimeswidget.settings.WidgetSettings;
@@ -53,11 +54,10 @@ import com.forrestguice.suntimeswidget.settings.WidgetSettings;
 import com.forrestguice.suntimeswidget.views.IconUtils;
 import com.forrestguice.suntimeswidget.views.SpanUtils;
 import com.forrestguice.suntimeswidget.views.Toast;
-import com.forrestguice.suntimeswidget.welcome.WelcomeFirstPageView;
-import com.forrestguice.support.app.ActivityResultLauncherCompat;
 import com.forrestguice.support.app.AlertDialog;
 import com.forrestguice.support.content.ContextCompat;
 import com.forrestguice.support.preference.CheckBoxPreference;
+import com.forrestguice.support.preference.DialogPreference;
 import com.forrestguice.support.preference.ListPreference;
 import com.forrestguice.support.preference.Preference;
 import com.forrestguice.support.preference.PreferenceFragment;
@@ -185,6 +185,7 @@ public class GeneralPrefsFragment extends PreferenceFragment
         Preference introScreenPref = (Preference) fragment.findPreference("appwidget_0_intro_screen");
         if (introScreenPref != null)
         {
+            introScreenPref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionSettings, R.drawable.ic_action_settings));
             introScreenPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener()
             {
                 @Override
@@ -197,6 +198,7 @@ public class GeneralPrefsFragment extends PreferenceFragment
         Preference crashReportPref = (Preference) fragment.findPreference("appwidget_0_crashreport");
         if (crashReportPref != null)
         {
+            crashReportPref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionError, R.drawable.ic_action_error));
             crashReportPref.setSummary(getCrashReportSummary(context));
             crashReportPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -205,6 +207,10 @@ public class GeneralPrefsFragment extends PreferenceFragment
                     return false;
                 }
             });
+        }
+        HelpPreference dataSourcePref = (HelpPreference) fragment.findPreference("appwidget_0_general_calculator_help");
+        if (dataSourcePref != null) {
+            dataSourcePref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionHelp, R.drawable.ic_action_help));
         }
     }
 
@@ -331,7 +337,7 @@ public class GeneralPrefsFragment extends PreferenceFragment
         a.recycle();
 
         String title = context.getString(R.string.settings_general_altitude_enabled) + " [i]";
-        int iconSize = (int) context.getResources().getDimension(R.dimen.prefIcon_size);
+        int iconSize = (int) context.getResources().getDimension(R.dimen.prefSummaryIcon_size);
         ImageSpan altitudeIcon = SpanUtils.createImageSpan(context, drawableID, iconSize, iconSize, 0);
         SpannableStringBuilder altitudeSpan = SpanUtils.createSpan(context, title, "[i]", altitudeIcon);
         altitudePref.setTitle(altitudeSpan);
@@ -357,7 +363,7 @@ public class GeneralPrefsFragment extends PreferenceFragment
         {
             AlertDialog.Builder dialog = new AlertDialog.Builder(context)
                     .setTitle(context.getString(R.string.crash_dialog_title))
-                    .setIcon(IconUtils.getThemedIcon(context, R.attr.icActionError, R.drawable.ic_action_error));
+                    .setIcon(IconUtils.getAlertDialogIcon(context, R.attr.icActionError, R.drawable.ic_action_error));
 
             String reportContent = ExceptionHandler.getLastCrashReport(context);
             if (reportContent != null)

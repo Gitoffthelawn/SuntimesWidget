@@ -168,7 +168,8 @@ public class UIPrefsFragment extends PreferenceFragment
 
         Preference manage_events = (Preference) fragment.findPreference("manage_events");
         if (manage_events != null) {
-            manage_events.setOnPreferenceClickListener(getOnManageEventsClickedListener(fragment.getActivity()));
+            manage_events.setIcon(IconUtils.getPreferenceIcon(activity, R.attr.icActionEvents, R.drawable.ic_action_events_ref));
+            manage_events.setOnPreferenceClickListener(getOnManageEventsClickedListener(activity));
             manage_events.setOrder(-91);
         }
 
@@ -581,7 +582,7 @@ public class UIPrefsFragment extends PreferenceFragment
         a.recycle();
 
         String title = context.getString(R.string.settings_general_observerheight) + " [i]";
-        int iconSize = (int) context.getResources().getDimension(R.dimen.prefIcon_size);
+        int iconSize = (int) context.getResources().getDimension(R.dimen.prefSummaryIcon_size);
         ImageSpan shadowIcon = SpanUtils.createImageSpan(context, drawableID, iconSize, iconSize, 0);
         SpannableStringBuilder titleSpan = SpanUtils.createSpan(context, title, "[i]", shadowIcon);
         pref.setTitle(titleSpan);

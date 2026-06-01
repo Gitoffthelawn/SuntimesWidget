@@ -434,6 +434,7 @@ public class PlacesPrefsFragment extends PreferenceFragment
             myParent = context;
 
             if (managePref != null) {
+                managePref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionSettings, R.drawable.ic_action_place));
                 managePref.setOnPreferenceClickListener(onClickManagePlaces);
             }
 
