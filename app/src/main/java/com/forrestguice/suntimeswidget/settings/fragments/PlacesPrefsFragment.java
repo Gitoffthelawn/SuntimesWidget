@@ -325,10 +325,10 @@ public class PlacesPrefsFragment extends PreferenceFragment
 
         int iconSize = (int) getResources().getDimension(R.dimen.statusIcon_size);
         TypedArray typedArray = context.obtainStyledAttributes(R.styleable.LocationProviderStatus);
-        ImageSpan altitudeIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionAltitude, R.drawable.check_altitude_dark), iconSize, iconSize, 0);
-        ImageSpan cellIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionGPS_cell, R.drawable.ic_action_celltower_dark), iconSize, iconSize, 0);
-        ImageSpan networkIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionGPS_network, R.drawable.ic_action_network_dark), iconSize, iconSize, 0);
-        ImageSpan gpsIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionGPS_satellite, R.drawable.ic_action_satellite_dark), iconSize, iconSize, 0);
+        ImageSpan altitudeIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionAltitude, R.drawable.ic_action_terrain_dark), iconSize, iconSize, 0, null);
+        ImageSpan cellIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionGPS_cell, R.drawable.ic_action_celltower_dark), iconSize, iconSize, 0, null);
+        ImageSpan networkIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionGPS_network, R.drawable.ic_action_network_dark), iconSize, iconSize, 0, null);
+        ImageSpan gpsIcon = SpanUtils.createImageSpan(context, typedArray.getResourceId(R.styleable.LocationProviderStatus_icActionGPS_satellite, R.drawable.ic_action_satellite_dark), iconSize, iconSize, 0, null);
         typedArray.recycle();
 
         CharSequence summaryDisplay = summary;

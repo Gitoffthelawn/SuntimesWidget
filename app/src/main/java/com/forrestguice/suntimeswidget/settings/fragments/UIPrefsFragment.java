@@ -577,13 +577,10 @@ public class UIPrefsFragment extends PreferenceFragment
 
     public static void initPref_observerHeight(final Activity context, final LengthPreference pref)
     {
-        TypedArray a = context.obtainStyledAttributes(new int[]{R.attr.icActionShadow});
-        int drawableID = a.getResourceId(0, R.drawable.ic_action_shadow);
-        a.recycle();
-
+        int drawableID = IconUtils.getThemedIcon(context, R.attr.icActionShadow, R.drawable.ic_action_shadow);
         String title = context.getString(R.string.settings_general_observerheight) + " [i]";
         int iconSize = (int) context.getResources().getDimension(R.dimen.prefSummaryIcon_size);
-        ImageSpan shadowIcon = SpanUtils.createImageSpan(context, drawableID, iconSize, iconSize, 0);
+        ImageSpan shadowIcon = SpanUtils.createImageSpan(context, drawableID, iconSize, iconSize, 0, null);
         SpannableStringBuilder titleSpan = SpanUtils.createSpan(context, title, "[i]", shadowIcon);
         pref.setTitle(titleSpan);
 

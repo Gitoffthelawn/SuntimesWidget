@@ -161,8 +161,8 @@ public class GeneralPrefsFragment extends PreferenceFragment
         CheckBoxPreference altitudePref = (CheckBoxPreference)fragment.findPreference(key_altitudePref);
         if (altitudePref != null)
         {
-            initPref_altitude(fragment.getActivity(), altitudePref);
-            loadPref_altitude(fragment.getActivity(), altitudePref);
+            initPref_altitude(context, altitudePref);
+            loadPref_altitude(context, altitudePref);
         }
 
         String key_sunCalc = WidgetSettings.keyCalculatorModePref(0);
@@ -329,15 +329,12 @@ public class GeneralPrefsFragment extends PreferenceFragment
         return summary;
     }
 
-    public static void initPref_altitude(final Activity context, final CheckBoxPreference altitudePref)
+    public static void initPref_altitude(Context context, final CheckBoxPreference altitudePref)
     {
-        TypedArray a = context.obtainStyledAttributes(new int[]{R.attr.icActionAltitude});
-        int drawableID = a.getResourceId(0, R.drawable.ic_action_terrain_dark);
-        a.recycle();
-
+        int drawableID = IconUtils.getThemedIcon(context, R.attr.icActionAltitude, R.drawable.ic_action_terrain_ref);
         String title = context.getString(R.string.settings_general_altitude_enabled) + " [i]";
         int iconSize = (int) context.getResources().getDimension(R.dimen.prefSummaryIcon_size);
-        ImageSpan altitudeIcon = SpanUtils.createImageSpan(context, drawableID, iconSize, iconSize, 0);
+        ImageSpan altitudeIcon = SpanUtils.createImageSpan(context, drawableID, iconSize, iconSize, 0, null);
         SpannableStringBuilder altitudeSpan = SpanUtils.createSpan(context, title, "[i]", altitudeIcon);
         altitudePref.setTitle(altitudeSpan);
     }

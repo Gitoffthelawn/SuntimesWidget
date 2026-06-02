@@ -663,12 +663,12 @@ public class AlarmEditActivity extends AppCompatActivity implements AlarmItemAda
         int[] iconAttrs = { R.attr.text_accentColor, R.attr.icActionBack, R.attr.icActionEnableAlarm, R.attr.icActionSave, R.attr.icActionCancel, R.attr.icActionDelete, R.attr.icActionTimeReset };
         TypedArray typedArray = obtainStyledAttributes(iconAttrs);
         int accentColor = ContextCompat.getColor(this, typedArray.getResourceId(0, R.color.text_accent_dark));
-        ImageSpan iconBack = SpanUtils.createImageSpan(this, typedArray.getResourceId(1, R.drawable.ic_action_discard), iconSize, iconSize, 0);
+        ImageSpan iconBack = SpanUtils.createImageSpan(this, typedArray.getResourceId(1, R.drawable.ic_action_discard), iconSize, iconSize, 0, null);
         ImageSpan iconDone = SpanUtils.createImageSpan(this, typedArray.getResourceId(2, R.drawable.ic_action_doneall), iconSize, iconSize, accentColor);
-        ImageSpan iconSave = SpanUtils.createImageSpan(this, typedArray.getResourceId(3, R.drawable.ic_action_save), iconSize, iconSize, 0);
-        ImageSpan iconCancel = SpanUtils.createImageSpan(this, typedArray.getResourceId(4, R.drawable.ic_action_cancel), iconSize, iconSize, 0);
-        ImageSpan iconDelete = SpanUtils.createImageSpan(this, typedArray.getResourceId(5, R.drawable.ic_action_discard), iconSize, iconSize, 0);
-        ImageSpan iconOffset = SpanUtils.createImageSpan(this, typedArray.getResourceId(6, R.drawable.ic_action_timereset), iconSize, iconSize, 0);
+        ImageSpan iconSave = SpanUtils.createImageSpan(this, typedArray.getResourceId(3, R.drawable.ic_action_save), iconSize, iconSize, 0, null);
+        ImageSpan iconCancel = SpanUtils.createImageSpan(this, typedArray.getResourceId(4, R.drawable.ic_action_cancel), iconSize, iconSize, 0, null);
+        ImageSpan iconDelete = SpanUtils.createImageSpan(this, typedArray.getResourceId(5, R.drawable.ic_action_discard), iconSize, iconSize, 0, null);
+        ImageSpan iconOffset = SpanUtils.createImageSpan(this, typedArray.getResourceId(6, R.drawable.ic_action_timereset), iconSize, iconSize, 0, null);
         typedArray.recycle();
 
         SpanUtils.ImageSpanTag[] helpTags = {
