@@ -197,7 +197,7 @@ public class GeneralPrefsFragment extends PreferenceFragment
         Preference crashReportPref = (Preference) fragment.findPreference("appwidget_0_crashreport");
         if (crashReportPref != null)
         {
-            crashReportPref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionError, R.drawable.ic_action_error));
+            crashReportPref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionError, R.drawable.ic_action_report_dark));
             crashReportPref.setSummary(getCrashReportSummary(context));
             crashReportPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -362,7 +362,7 @@ public class GeneralPrefsFragment extends PreferenceFragment
         {
             AlertDialog.Builder dialog = new AlertDialog.Builder(context)
                     .setTitle(context.getString(R.string.crash_dialog_title))
-                    .setIcon(IconUtils.getAlertDialogIcon(context, R.attr.icActionError, R.drawable.ic_action_error));
+                    .setIcon(IconUtils.getAlertDialogIcon(context, R.attr.icActionError, R.drawable.ic_action_report_ref));
 
             String reportContent = ExceptionHandler.getLastCrashReport(context);
             if (reportContent != null)

@@ -44,7 +44,7 @@
     <drawable name="ic_action_sounddisabled_ref1">@drawable/ic_action_sounddisabled</drawable>
     <drawable name="ic_action_about_ref1">@drawable/ic_action_about</drawable>
     <drawable name="ic_action_warning_ref1">@drawable/ic_action_warning</drawable>
-    <drawable name="ic_action_error_ref1">@drawable/ic_action_error</drawable>
+    <drawable name="ic_action_error_ref1">@drawable/ic_action_report_dark</drawable>
     <drawable name="ic_action_widget_ref1">@drawable/ic_action_widget</drawable>
     <drawable name="ic_palette_ref1">@drawable/ic_action_palette</drawable>
     <drawable name="ic_action_extension_ref1">@drawable/ic_action_extension</drawable>

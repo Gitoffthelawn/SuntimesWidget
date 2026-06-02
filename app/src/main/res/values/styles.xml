@@ -150,7 +150,7 @@
         <item name="icActionSoundDisabled">@drawable/ic_action_sounddisabled_ref</item>
         <item name="icActionAbout">@drawable/ic_action_about_ref</item>
         <item name="icActionWarning">@drawable/ic_action_warning_ref</item>
-        <item name="icActionError">@drawable/ic_action_error_ref</item>
+        <item name="icActionError">@drawable/ic_action_report_ref</item>
         <item name="icActionWidgets">@drawable/ic_action_widget_ref</item>
         <item name="icActionEvents">@drawable/ic_action_events_ref</item>
         <item name="icActionAppearance">@drawable/ic_action_palette_ref</item>
@@ -400,7 +400,7 @@
         <item name="icActionSoundDisabled">@drawable/ic_action_sounddisabled_light</item>
         <item name="icActionAbout">@drawable/ic_action_about_light</item>
         <item name="icActionWarning">@drawable/ic_action_warning_light</item>
-        <item name="icActionError">@drawable/ic_action_error_light</item>
+        <item name="icActionError">@drawable/ic_action_report_light</item>
         <item name="icActionWidgets">@drawable/ic_action_widget_light</item>
         <item name="icActionEvents">@drawable/ic_action_widget_light</item>    <!-- TODO -->
         <item name="icActionAppearance">@drawable/ic_action_palette_light</item>
@@ -655,7 +655,7 @@
         <item name="icActionSoundDisabled">@drawable/ic_action_sounddisabled</item>
         <item name="icActionAbout">@drawable/ic_action_about</item>
         <item name="icActionWarning">@drawable/ic_action_warning</item>
-        <item name="icActionError">@drawable/ic_action_error</item>
+        <item name="icActionError">@drawable/ic_action_report_dark</item>
         <item name="icActionWidgets">@drawable/ic_action_widget</item>
         <item name="icActionEvents">@drawable/ic_action_widget</item>    <!-- TODO -->
         <item name="icActionAppearance">@drawable/ic_action_palette</item>

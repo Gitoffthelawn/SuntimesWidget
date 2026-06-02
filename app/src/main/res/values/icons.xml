@@ -59,7 +59,7 @@
     <drawable name="ic_action_sounddisabled_ref">@drawable/ic_action_sounddisabled_light</drawable>
     <drawable name="ic_action_about_ref">@drawable/ic_action_about_light</drawable>
     <drawable name="ic_action_warning_ref">@drawable/ic_action_warning_light</drawable>
-    <drawable name="ic_action_error_ref">@drawable/ic_action_error_light</drawable>
+    <drawable name="ic_action_report_ref">@drawable/ic_action_report_light</drawable>
     <drawable name="ic_action_widget_ref">@drawable/ic_action_widget_light</drawable>
     <drawable name="ic_action_events_ref">@drawable/ic_action_widget_light</drawable>  <!-- TODO -->
     <drawable name="ic_action_palette_ref">@drawable/ic_action_palette_light</drawable>
