@@ -193,7 +193,7 @@ public class WorldMapView extends ImageView
 
             case EQUIRECTANGULAR_BLUEMARBLE:
                 options.map = ContextCompat.getDrawable(context, R.drawable.world_topo_bathy_1024x512);   // land_shallow_topo_1024);
-                options.map_night = ContextCompat.getDrawable(context, R.drawable.earth_lights_lrg_1024);
+                options.map_night = ContextCompat.getDrawable(context, R.drawable.world_earth_lights_lrg_1024);
                 options.foregroundColor = Color.TRANSPARENT;
                 options.hasTransparentBaseMap = false;
                 break;
