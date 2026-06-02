@@ -57,7 +57,6 @@ import com.forrestguice.suntimeswidget.views.Toast;
 import com.forrestguice.support.app.AlertDialog;
 import com.forrestguice.support.content.ContextCompat;
 import com.forrestguice.support.preference.CheckBoxPreference;
-import com.forrestguice.support.preference.DialogPreference;
 import com.forrestguice.support.preference.ListPreference;
 import com.forrestguice.support.preference.Preference;
 import com.forrestguice.support.preference.PreferenceFragment;
@@ -210,7 +209,7 @@ public class GeneralPrefsFragment extends PreferenceFragment
         }
         HelpPreference dataSourcePref = (HelpPreference) fragment.findPreference("appwidget_0_general_calculator_help");
         if (dataSourcePref != null) {
-            dataSourcePref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionHelp, R.drawable.ic_action_help));
+            dataSourcePref.setIcon(IconUtils.getPreferenceIcon(context, R.attr.icActionHelp, R.drawable.ic_action_help_dark));
         }
     }
 

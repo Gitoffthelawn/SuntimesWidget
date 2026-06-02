@@ -52,7 +52,7 @@
     <drawable name="ic_action_shadow_ref1">@drawable/ic_action_shadow</drawable>
     <drawable name="ic_action_locale_ref1">@drawable/ic_action_locale</drawable>
     <drawable name="ic_action_settings_ref1">@drawable/ic_action_settings</drawable>
-    <drawable name="ic_action_help_ref1">@drawable/ic_action_help</drawable>
+    <drawable name="ic_action_help_ref1">@drawable/ic_action_help_dark</drawable>
     <drawable name="ic_action_accept_ref1">@drawable/ic_action_accept</drawable>
     <drawable name="ic_action_close_ref1">@drawable/ic_action_close</drawable>
     <drawable name="ic_action_back_ref1">@drawable/ic_action_back</drawable>
