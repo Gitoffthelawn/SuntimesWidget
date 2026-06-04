@@ -1043,7 +1043,7 @@ public class WorldMapDialog extends BottomSheetDialogBase
                         {
                             @Override
                             public void onClick(WorldMapBackgroundItem item) {
-                                onMapBackgroundResult(context, 0, Uri.parse(item.getUri()));
+                                onMapBackgroundResult(context, 0, Uri.parse(item.getUri()), item.shouldTint());
                             }
                         });
                     }
@@ -1228,7 +1228,7 @@ public class WorldMapDialog extends BottomSheetDialogBase
         updateViews();
     }
 
-    protected void onMapBackgroundResult(Context context, int requestCode, Uri uri)
+    protected void onMapBackgroundResult(Context context, int requestCode, Uri uri, boolean applyTint)
     {
         Drawable background = WorldMapView.loadDrawableFromUri(context, uri.toString());
         if (background == null) {
@@ -1247,7 +1247,7 @@ public class WorldMapDialog extends BottomSheetDialogBase
 
         double[] center = worldmap.getOptions().center;    // TODO: read center/projection info from image exif data?
         WorldMapWidgetSettings.saveWorldMapBackground(context, 0, mapTag, center, uri.toString());
-        WorldMapWidgetSettings.saveWorldMapPref(context, 0, WorldMapWidgetSettings.PREF_KEY_WORLDMAP_TINTMAP, mapTag, false);    // TODO: automatically set tint flag based on image transparency?
+        WorldMapWidgetSettings.saveWorldMapPref(context, 0, WorldMapWidgetSettings.PREF_KEY_WORLDMAP_TINTMAP, mapTag, applyTint);    // TODO: automatically set tint flag based on image transparency?
 
         updateOptions(context);
         worldmap.setMapMode(context, mapMode);
@@ -1265,7 +1265,7 @@ public class WorldMapDialog extends BottomSheetDialogBase
                 final int flags = data.getFlags() & Intent.FLAG_GRANT_READ_URI_PERMISSION;
                 context.getContentResolver().takePersistableUriPermission(uri, flags);
             }
-            onMapBackgroundResult(context, requestCode, uri);
+            onMapBackgroundResult(context, requestCode, uri, false);
         } else {
             Log.d(LOGTAG, "onActivityResult: bad result: " + resultCode + ", " + data);
         }

@@ -20,10 +20,8 @@ package com.forrestguice.suntimeswidget.map.backgrounds;
 
 public class WorldMapBackgroundItem
 {
-    public static final int INVALID_ID = -1;
-
     public WorldMapBackgroundItem() {}
-    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjectionLabel, String mapProjection, String fileUri)
+    public WorldMapBackgroundItem(String providerUri, String id, String title, String summary, String mapProjectionLabel, String mapProjection, String fileUri, boolean tint)
     {
         this.provider_uri = providerUri;
         this.id = id;
@@ -32,6 +30,7 @@ public class WorldMapBackgroundItem
         this.map_projection_label = mapProjectionLabel;
         this.map_projection = mapProjection;
         this.file_uri = fileUri;
+        this.tint = tint;
     }
 
     protected String id = null;
@@ -70,5 +69,10 @@ public class WorldMapBackgroundItem
     protected String file_uri;
     public String getUri() {
         return file_uri;
+    }
+
+    protected boolean tint;
+    public boolean shouldTint() {
+        return tint;
     }
 }
