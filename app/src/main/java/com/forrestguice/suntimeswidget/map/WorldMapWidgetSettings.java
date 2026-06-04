@@ -25,6 +25,7 @@ import android.net.Uri;
 
 import com.forrestguice.suntimeswidget.R;
 
+import com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract;
 import com.forrestguice.suntimeswidget.widgets.SuntimesWidget2;
 import com.forrestguice.suntimeswidget.widgets.layouts.SunPosLayout;
 import com.forrestguice.suntimeswidget.widgets.layouts.SunPosLayout_3X2_0;
@@ -182,14 +183,14 @@ public class WorldMapWidgetSettings
      */
     public static enum WorldMapWidgetMode implements WidgetSettings.WidgetModeDisplay
     {
-        EQUIRECTANGULAR_SIMPLE("Simple", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_0, new SunPosLayout_3X2_0(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQC, "eqc"),
-        EQUIRECTANGULAR_BLUEMARBLE("Blue Marble", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_01, new SunPosLayout_3X2_0(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQC, "eqc"),
-        EQUIAZIMUTHAL_SIMPLE("Polar [north]", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_0, new SunPosLayout_3X3_0(), false, 90, 0, "Equidistant Azimuthal", PROJ4_AEQD, "aeqd_90,0"),
-        EQUIAZIMUTHAL_SIMPLE1("Polar [south]", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_1, new SunPosLayout_3X3_0(), false, -90, 0, "Equidistant Azimuthal", PROJ4_AEQD, "aeqd_-90,0"),
-        EQUIAZIMUTHAL_SIMPLE2("Equidistant Azimuthal", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_2, new SunPosLayout_3X3_0(),true, 33.45, -111.94, "Equidistant Azimuthal", PROJ4_AEQD1, "aeqd_33,-111"),
-        MERCATOR_SIMPLE("Mercator", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_3,  new SunPosLayout_3X3_0(),false, 0, 0, "Mercator", PROJ4_MERC, "merc"),   // TODO: layout
-        VANDERGRINTEN_SIMPLE("Van der Grinten", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_4, new SunPosLayout_3X3_0(), false, 0, 0, "Van der Grinten", PROJ4_VANDG, "vandg"),
-        SINUSOIDAL_SIMPLE("Sinusoidal", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x3_5,  new SunPosLayout_3X3_0(),false, 0, 0, "Sinuisoidal", PROJ4_SINU, "sinu"),
+        EQUIRECTANGULAR_SIMPLE("Simple", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_0, new SunPosLayout_3X2_0(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQC, WorldMapBackgroundContract.PROJECTION_EQC),
+        EQUIRECTANGULAR_BLUEMARBLE("Blue Marble", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x2_01, new SunPosLayout_3X2_0(), false, 0, 0, "Equidistant Rectangular", PROJ4_EQC, WorldMapBackgroundContract.PROJECTION_EQC),
+        EQUIAZIMUTHAL_SIMPLE("Polar [north]", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_0, new SunPosLayout_3X3_0(), false, 90, 0, "Equidistant Azimuthal", PROJ4_AEQD, WorldMapBackgroundContract.PROJECTION_AEQD_NORTH),
+        EQUIAZIMUTHAL_SIMPLE1("Polar [south]", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_1, new SunPosLayout_3X3_0(), false, -90, 0, "Equidistant Azimuthal", PROJ4_AEQD, WorldMapBackgroundContract.PROJECTION_AEQD_SOUTH),
+        EQUIAZIMUTHAL_SIMPLE2("Equidistant Azimuthal", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_2, new SunPosLayout_3X3_0(),true, 33.45, -111.94, "Equidistant Azimuthal", PROJ4_AEQD1, WorldMapBackgroundContract.PROJECTION_AEQD_ + "33,-111"),
+        MERCATOR_SIMPLE("Mercator", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_3,  new SunPosLayout_3X3_0(),false, 0, 0, "Mercator", PROJ4_MERC, WorldMapBackgroundContract.PROJECTION_MERC),   // TODO: layout
+        VANDERGRINTEN_SIMPLE("Van der Grinten", MAPTAG_3x3, R.layout.layout_widget_sunpos_3x3_4, new SunPosLayout_3X3_0(), false, 0, 0, "Van der Grinten", PROJ4_VANDG, WorldMapBackgroundContract.PROJECTION_VANDG),
+        SINUSOIDAL_SIMPLE("Sinusoidal", MAPTAG_3x2, R.layout.layout_widget_sunpos_3x3_5,  new SunPosLayout_3X3_0(),false, 0, 0, "Sinuisoidal", PROJ4_SINU, WorldMapBackgroundContract.PROJECTION_SINU),
         ;
 
         private final SunPosLayout layout;

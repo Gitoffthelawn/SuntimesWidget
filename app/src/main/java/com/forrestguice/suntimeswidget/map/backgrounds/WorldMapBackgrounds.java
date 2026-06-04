@@ -19,7 +19,6 @@ package com.forrestguice.suntimeswidget.map.backgrounds;
 
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -34,7 +33,6 @@ import android.view.SubMenu;
 import com.forrestguice.annotation.NonNull;
 import com.forrestguice.annotation.Nullable;
 import com.forrestguice.suntimeswidget.BuildConfig;
-import com.forrestguice.suntimeswidget.views.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,6 +40,45 @@ import java.util.List;
 
 /**
  * WorldMapBackgrounds
+ */
+
+/*
+    Example manifest:
+        <uses-permission android:name="${suntimesPermissionRoot}.permission.READ_CALCULATOR" />
+
+        <!-- An intent-filter and meta-data are declared in its manifest of the addon app configuring the MapProvider. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            ...
+            <intent-filter>
+                <action android:name="suntimes.action.ADDON_WORLDMAP_BACKGROUND" />
+                <category android:name="suntimes.SUNTIMES_ADDON" />
+            </intent-filter>
+
+            <meta-data android:name="WorldMapBackgroundProvider"
+                android:value="content://${mappackAuthorityRoot}.provider" />
+
+        </activity>
+
+        <!-- The MapProvider is responsible for sharing a list of URIs and granting URI permissions.
+             It implements WorldMapBackgroundContract. -->
+        <provider
+            android:name=".mappack.SuntimesMapProvider"
+            android:authorities="${mappackAuthorityRoot}.provider"
+            android:exported="true" android:permission="${suntimesPermissionRoot}.permission.READ_CALCULATOR"
+            android:syncable="false" />
+
+        <!-- A standard FileProvider is responsible for providing the background files via URI. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${mappackAuthorityRoot}.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+
  */
 public class WorldMapBackgrounds
 {
