@@ -1043,7 +1043,7 @@ public class WorldMapDialog extends BottomSheetDialogBase
                         {
                             @Override
                             public void onClick(WorldMapBackgroundItem item) {
-                                onMapBackgroundResult(context, 0, Uri.parse(item.getUri()), item.shouldTint());
+                                onMapBackgroundResult(context, 0, Uri.parse(item.getUri()), item.shouldTint(), item.getMapProjectionCenter());
                             }
                         });
                     }
@@ -1228,7 +1228,7 @@ public class WorldMapDialog extends BottomSheetDialogBase
         updateViews();
     }
 
-    protected void onMapBackgroundResult(Context context, int requestCode, Uri uri, boolean applyTint)
+    protected void onMapBackgroundResult(Context context, int requestCode, Uri uri, boolean applyTint, @Nullable double[] recenter)
     {
         Drawable background = WorldMapView.loadDrawableFromUri(context, uri.toString());
         if (background == null) {
@@ -1246,6 +1246,12 @@ public class WorldMapDialog extends BottomSheetDialogBase
         }
 
         double[] center = worldmap.getOptions().center;    // TODO: read center/projection info from image exif data?
+        if (recenter != null) {
+            center = recenter;
+            WorldMapWidgetSettings.saveWorldMapCenter(context, 0, mapMode.getMapTag(), center);
+            WorldMapWidgetSettings.saveWorldMapString(context, 0, WorldMapWidgetSettings.PREF_KEY_WORLDMAP_CENTER_LABEL, mapMode.getMapTag(), "TODO");
+        }
+
         WorldMapWidgetSettings.saveWorldMapBackground(context, 0, mapTag, center, uri.toString());
         WorldMapWidgetSettings.saveWorldMapPref(context, 0, WorldMapWidgetSettings.PREF_KEY_WORLDMAP_TINTMAP, mapTag, applyTint);    // TODO: automatically set tint flag based on image transparency?
 
@@ -1265,7 +1271,7 @@ public class WorldMapDialog extends BottomSheetDialogBase
                 final int flags = data.getFlags() & Intent.FLAG_GRANT_READ_URI_PERMISSION;
                 context.getContentResolver().takePersistableUriPermission(uri, flags);
             }
-            onMapBackgroundResult(context, requestCode, uri, false);
+            onMapBackgroundResult(context, requestCode, uri, false, null);
         } else {
             Log.d(LOGTAG, "onActivityResult: bad result: " + resultCode + ", " + data);
         }

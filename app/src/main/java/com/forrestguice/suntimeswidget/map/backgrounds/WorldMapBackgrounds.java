@@ -162,7 +162,10 @@ public class WorldMapBackgrounds
                     int i_title = cursor.getColumnIndex(WorldMapBackgroundContract.COLUMN_BACKGROUND_TITLE);
                     int i_summary = cursor.getColumnIndex(WorldMapBackgroundContract.COLUMN_BACKGROUND_SUMMARY);
                     int i_mapproj = cursor.getColumnIndex(WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION);
+                    int i_mapproj_center = cursor.getColumnIndex(WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION_CENTER);
+                    int i_mapproj_label = cursor.getColumnIndex(WorldMapBackgroundContract.COLUMN_BACKGROUND_PROJECTION_LABEL);
                     int i_fileuri = cursor.getColumnIndex(WorldMapBackgroundContract.COLUMN_BACKGROUND_FILE);
+                    int i_tint = cursor.getColumnIndex(WorldMapBackgroundContract.COLUMN_BACKGROUND_TINT);
 
                     String map_projection = (i_mapproj >= 0) ? cursor.getString(i_mapproj) : null;
                     if (map_projection == null) {
@@ -179,7 +182,10 @@ public class WorldMapBackgrounds
                     item.provider_uri = provider;
                     item.id = (i_id >= 0) ? cursor.getString(i_id) : null;
                     item.map_projection = map_projection;
+                    item.map_projection_label = (i_mapproj_label >= 0 ? cursor.getString(i_mapproj_label) : "unknown");
+                    item.map_projection_center = (i_mapproj_center >= 0 ? WorldMapBackgroundItem.parseCenter(cursor.getString(i_mapproj_center)) : null);
                     item.file_uri = file_uri;
+                    item.tint = (i_tint >= 0 && Boolean.parseBoolean(cursor.getString(i_tint)));
 
                     String titleValue = (i_title >= 0) ? cursor.getString(i_title) : null;
                     item.setTitle(titleValue != null ? titleValue : uri.getLastPathSegment());
