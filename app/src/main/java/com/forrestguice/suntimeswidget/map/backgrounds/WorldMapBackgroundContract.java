@@ -37,16 +37,15 @@ public interface WorldMapBackgroundContract
     String COLUMN_BACKGROUND_TITLE = "background_title";                         // short display string
     String COLUMN_BACKGROUND_SUMMARY = "background_summary";                     // long display string
     String COLUMN_BACKGROUND_FILE = "background_file";                           // file uri (string)
-    String COLUMN_BACKGROUND_TINT = "background_tint";                           // request tint flag (boolean as string)
+    String COLUMN_BACKGROUND_TINT = "background_tint";                           // request tint flag (boolean)
     String COLUMN_BACKGROUND_PROJECTION = "background_projection";               // proj4 string
-    String COLUMN_BACKGROUND_PROJECTION_LABEL = "background_projection_label";   // projection display string
-    String COLUMN_BACKGROUND_PROJECTION_CENTER = "background_projection_center"; // lat,lon (string) (may be null)
+    String COLUMN_BACKGROUND_PROJECTION_CENTER = "background_projection_center"; // lat,lon
 
     String QUERY_BACKGROUND_LIST = "backgroundList";
     String[] QUERY_BACKGROUND_LIST_PROJECTION = new String[] {
             COLUMN_BACKGROUND_ID,
             COLUMN_BACKGROUND_TITLE, COLUMN_BACKGROUND_SUMMARY,
-            COLUMN_BACKGROUND_PROJECTION, COLUMN_BACKGROUND_PROJECTION_LABEL, COLUMN_BACKGROUND_PROJECTION_CENTER,
+            COLUMN_BACKGROUND_PROJECTION, COLUMN_BACKGROUND_PROJECTION_CENTER,
             COLUMN_BACKGROUND_FILE, COLUMN_BACKGROUND_TINT
     };
 
@@ -57,5 +56,4 @@ public interface WorldMapBackgroundContract
     String PROJECTION_MERC = "merc";
     String PROJECTION_SINU = "sinu";
     String PROJECTION_VANDG = "vandg";
-
 }
