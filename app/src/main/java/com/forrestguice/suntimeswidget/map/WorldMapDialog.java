@@ -1039,7 +1039,8 @@ public class WorldMapDialog extends BottomSheetDialogBase
                 {
                     List<WorldMapBackgroundItem> items = WorldMapBackgrounds.queryWorldMapBackgroundItems(context, projectionID);   // TODO: w/ timeout
                     if (!items.isEmpty()) {
-                        WorldMapBackgrounds.populateSubMenu(context, addonBackgroundsItem, items, new WorldMapBackgrounds.OnWorldMapBackgroundItemClick()
+                        WorldMapBackgrounds.populateSubMenu(context, addonBackgroundsItem, R.id.addonBackgroundsGroup,
+                                mapMode.getMapTag(), mapMode.getProjectionCenter(), items, new WorldMapBackgrounds.OnWorldMapBackgroundItemClick()
                         {
                             @Override
                             public void onClick(WorldMapBackgroundItem item) {

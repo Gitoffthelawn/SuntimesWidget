@@ -25,18 +25,23 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
+import android.view.View;
 
 import com.forrestguice.annotation.NonNull;
 import com.forrestguice.annotation.Nullable;
 import com.forrestguice.suntimeswidget.BuildConfig;
+import com.forrestguice.suntimeswidget.R;
+import com.forrestguice.suntimeswidget.map.WorldMapWidgetSettings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * WorldMapBackgrounds
@@ -221,16 +226,25 @@ public class WorldMapBackgrounds
      * @param submenuItem MenuItem
      * @param backgroundItems List<WorldMapBackgroundItem>
      */
-    public static void populateSubMenu(Context context, @Nullable MenuItem submenuItem, @NonNull List<WorldMapBackgroundItem> backgroundItems, @Nullable OnWorldMapBackgroundItemClick menuItemListener)
+    public static void populateSubMenu(Context context, @Nullable MenuItem submenuItem, int groupId, String mapTag, @Nullable double[] center, @NonNull List<WorldMapBackgroundItem> backgroundItems, @Nullable OnWorldMapBackgroundItemClick menuItemListener)
     {
         if (submenuItem != null)
         {
+            String selectedUri = WorldMapWidgetSettings.loadWorldMapBackground(context, 0, mapTag, center);
             SubMenu submenu = submenuItem.getSubMenu();
             if (submenu != null)
             {
+                int order = 0;
                 for (WorldMapBackgroundItem item : backgroundItems)
                 {
-                    MenuItem menuItem = submenu.add(Menu.NONE, Menu.NONE, Menu.NONE, item.getTitle());
+                    int itemID = Menu.NONE;
+                    if (Build.VERSION.SDK_INT >= 17) {
+                        itemID = View.generateViewId();
+                    }
+
+                    MenuItem menuItem = submenu.add(groupId, itemID, order++, item.getTitle());
+                    menuItem.setChecked(item.getUri().equals(selectedUri));
+                    Log.d("DEBUG", item.getUri() + " ?= " + selectedUri);
                     menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
                     {
                         @Override
@@ -243,6 +257,7 @@ public class WorldMapBackgrounds
                         }
                     });
                 }
+                submenu.setGroupCheckable(groupId, true, true);    // true checkable, true exclusive
             }
         }
     }
