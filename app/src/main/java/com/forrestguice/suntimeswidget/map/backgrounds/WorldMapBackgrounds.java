@@ -35,13 +35,14 @@ import android.view.View;
 import com.forrestguice.annotation.NonNull;
 import com.forrestguice.annotation.Nullable;
 import com.forrestguice.suntimeswidget.BuildConfig;
-import com.forrestguice.suntimeswidget.R;
 import com.forrestguice.suntimeswidget.map.WorldMapWidgetSettings;
+import com.forrestguice.util.ExecutorUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
+import java.util.concurrent.Callable;
 
 import static com.forrestguice.suntimeswidget.map.backgrounds.WorldMapBackgroundContract.TYPE_DAY;
 
@@ -147,6 +148,28 @@ public class WorldMapBackgrounds
         return items;
     }
 
+    public static List<WorldMapBackgroundItem> queryWorldMapBackgroundItemsWithTimeout(Context context, String projection, int timeoutAfter)
+    {
+        List<WorldMapBackgroundItem> items = ExecutorUtils.getResult("", new Callable<List<WorldMapBackgroundItem>>() {
+            @Override
+            public List<WorldMapBackgroundItem> call() throws Exception {
+                return queryWorldMapBackgroundItems(context, projection);
+            }
+        }, timeoutAfter);
+        return (items != null ? items : new ArrayList<>());
+    }
+
+    public static List<WorldMapBackgroundItem> values(String type, List<WorldMapBackgroundItem> items)
+    {
+        List<WorldMapBackgroundItem> result = new ArrayList<>();
+        for (WorldMapBackgroundItem item : items) {
+            if (type.equals(item.getType())) {
+                result.add(item);
+            }
+        }
+        return result;
+    }
+
     /**
      * Retrieve the list of available backgrounds from a given background provider.
      * @param provider world map background provider uri (@see queryWorldMapBackgroundProviders)
@@ -230,7 +253,7 @@ public class WorldMapBackgrounds
      * @param submenuItem MenuItem
      * @param backgroundItems List<WorldMapBackgroundItem>
      */
-    public static void populateSubMenu(Context context, @Nullable MenuItem submenuItem, int groupId, String mapTag, @Nullable double[] center, @NonNull List<WorldMapBackgroundItem> backgroundItems, @Nullable OnWorldMapBackgroundItemClick menuItemListener)
+    public static void populateSubMenu(Context context, @Nullable MenuItem submenuItem, int groupId, String mapTag, @Nullable double[] center, @NonNull Collection<WorldMapBackgroundItem> backgroundItems, @Nullable OnWorldMapBackgroundItemClick menuItemListener)
     {
         if (submenuItem != null)
         {
