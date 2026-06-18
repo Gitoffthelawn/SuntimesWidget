@@ -1,5 +1,12 @@
 ### ~
 
+### v0.17.3 (2026-06-22)
+* adds an extension for world map backgrounds; additional map imagery is now available through an addon (https://github.com/forrestguice/SuntimesMapPack).
+* fixes inaccurate Mercator and Van der Grinten projection extents.
+* fixes bug where "menu icons and text are misaligned" (#954); updates legacy icons with "material icons" and other icon related changes.
+* fixes bug where "span icons aren't readable in light mode" (white-on-white).
+* updates translation to German (#953 by Wuzzy).
+
 ### v0.17.2 (2026-05-23)
 * adds "material widget" themes: `Dark/Light/System (MD2)`, and `Dark/Light/System (Material)` themes (#934); renames legacy themes to `Dark/Light (Holo)`.
 * adds typeface options to the clock widget; color, font-family, bold, italic, outline, and cutout options.
