@@ -16,23 +16,26 @@ Android app (and widget collection) that displays sunlight and moonlight times f
 
 Displays sunrise and sunset, twilights (civil / nautical / astronomical), blue and golden hour, solstices and equinoxes, moonrise and moonset, moon phases and illumination. 
     
-<a href="https://forrestguice.github.io/SuntimesWidget/" target="_blank"><img align="left" src="https://forrestguice.github.io/SuntimesWidget/assets/images/ic_launcher_alarms.png" height="64" /></a> Suntimes Alarms<br />
+<a href="https://forrestguice.github.io/SuntimesWidget/" target="_blank"><img align="left" src="https://forrestguice.github.io/Suntimes/images/ic_launcher_alarms.png" height="64" /></a> Suntimes Alarms<br />
 An alarm clock for Suntimes.<br/><br />
 
-<a href="https://github.com/forrestguice/SuntimesCalendars/"><img align="left" src="https://forrestguice.github.io/SuntimesWidget/assets/images/ic_launcher.png" height="64" /></a> <a href="https://github.com/forrestguice/SuntimesCalendars/">Suntimes Calendars</a> <br />
+<a href="https://github.com/forrestguice/SuntimesCalendars/"><img align="left" src="https://forrestguice.github.io/Suntimes/images/ic_launcher.png" height="64" /></a> <a href="https://github.com/forrestguice/SuntimesCalendars/">Suntimes Calendars</a> <br />
 A calendar provider add-on for Suntimes.<br/><br />        
 
-<a href="https://github.com/forrestguice/SolunarPeriods/"><img align="left" src="https://forrestguice.github.io/SuntimesWidget/assets/images/ic_solunar.png" height="64" /></a> <a href="https://github.com/forrestguice/SolunarPeriods/">Solunar Periods</a> <br />
+<a href="https://github.com/forrestguice/SolunarPeriods/"><img align="left" src="https://forrestguice.github.io/Suntimes/images/ic_solunar.png" height="64" /></a> <a href="https://github.com/forrestguice/SolunarPeriods/">Solunar Periods</a> <br />
 A hunting and fishing add-on for Suntimes.<br/><br />
 
-<a href="https://github.com/forrestguice/NaturalHour/"><img align="left" src="https://forrestguice.github.io/SuntimesWidget/assets/images/ic_naturalhour.png" height="64" /></a> <a href="https://github.com/forrestguice/NaturalHour/">Natural Hour</a> <br />
+<a href="https://github.com/forrestguice/NaturalHour/"><img align="left" src="https://forrestguice.github.io/Suntimes/images/ic_naturalhour.png" height="64" /></a> <a href="https://github.com/forrestguice/NaturalHour/">Natural Hour</a> <br />
 A 24-hour clock & roman timekeeping add-on for Suntimes.<br/><br />
 
-<a href="https://github.com/forrestguice/SuntimesNFC/"><img align="left" src="https://forrestguice.github.io/SuntimesWidget/assets/images/ic_suntimesnfc.png" height="64" /></a> <a href="https://github.com/forrestguice/SuntimesNFC/">Suntimes NFC</a> <br />
+<a href="https://github.com/forrestguice/SuntimesNFC/"><img align="left" src="https://forrestguice.github.io/Suntimes/images/ic_suntimesnfc.png" height="64" /></a> <a href="https://github.com/forrestguice/SuntimesNFC/">Suntimes NFC</a> <br />
 An NFC Addon for Suntimes Alarms; dismiss alarms with an NFC tag.<br/><br />
 
-<a href="https://github.com/forrestguice/IntervalMidpoints/"><img align="left" src="https://forrestguice.github.io/SuntimesWidget/assets/images/ic_imidpoints.png" height="64" /></a> <a href="https://github.com/forrestguice/IntervalMidpoints/">Interval Midpoints</a> <br />
+<a href="https://github.com/forrestguice/IntervalMidpoints/"><img align="left" src="https://forrestguice.github.io/Suntimes/images/ic_imidpoints.png" height="64" /></a> <a href="https://github.com/forrestguice/IntervalMidpoints/">Interval Midpoints</a> <br />
 A midpoint calculator add-on for Suntimes Alarms; schedule alarms for event midpoints.<br/><br />
+
+<a href="https://github.com/forrestguice/SuntimesMapPack/"><img align="left" src="https://forrestguice.github.io/Suntimes/images/ic_mappack.png" height="64" /></a> <a href="https://github.com/forrestguice/SuntimesMapPack/">Suntimes Map Pack</a> <br />
+A world map background expansion pack for Suntimes.
 
 The app:
 * displays the current time (system time zone, custom time zone, or solar time) 
@@ -166,8 +169,9 @@ Version `0.9.*` contained the following additional permissions (removed in v0.10
 
 Do you find value in this software? Pay as you feel. 
 
-[![paypal](https://www.paypalobjects.com/webstatic/en_US/i/btn/png/silver-rect-paypal-26px.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NZJ5FJBCKY6K2) 
 <noscript><a href="https://liberapay.com/forrestguice/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+
+[![paypal](https://www.paypalobjects.com/webstatic/en_US/i/btn/png/silver-rect-paypal-26px.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NZJ5FJBCKY6K2)
 
 I want to express my thanks to those who have sent me something. This is greatly appreciated.
 
