@@ -111,21 +111,21 @@ Widgets are resizable and include...
 * 3x2 sun position widget that displays the sun's altitude as a line graph.
 * 3x2 sun position widget that displays sunlight over the year.
 
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/alarmwidget_1x1_preview.png" align="center"></img>
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/alarmwidget_2x2_preview.png" align="center"></img>
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/alarmwidget_3x2_preview.png" align="center"></img>
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/clockwidget_1x1_preview.png" align="center"></img>
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/widget1_preview.png" align="center"></img>
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/widget0_1x1_preview.png" align="center"></img>
-<img width="288px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/widget0_2x1_preview.png" align="center"></img>
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/widget2_preview.png" align="center"></img>
-<img width="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/moonwidget4_1x1_preview.png" align="center"></img>
-<img width="288px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/moonwidget0_2x1_preview.png" align="center"></img>
-<img height="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/moonwidget0_3x1_preview.png" align="center"></img>
-<img height="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/sunposwidget0_1x1_preview.png" align="center"></img>
-<img height="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/sunposwidget1_1x1_preview.png" align="center"></img>
-<img height="128px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/sunposwidget0_3x1_preview.png" align="center"></img>
-<img height="256px" src="https://github.com/forrestguice/SuntimesWidget/blob/master/app/src/main/res/drawable-nodpi/sunposwidget0_3x2_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/alarmwidget_1x1_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/alarmwidget_2x2_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/alarmwidget_3x2_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/clockwidget_1x1_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/widget1_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/widget0_1x1_preview.png" align="center"></img>
+<img width="288px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/widget0_2x1_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/widget2_preview.png" align="center"></img>
+<img width="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/moonwidget4_1x1_preview.png" align="center"></img>
+<img width="288px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/moonwidget0_2x1_preview.png" align="center"></img>
+<img height="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/moonwidget0_3x1_preview.png" align="center"></img>
+<img height="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/sunposwidget0_1x1_preview.png" align="center"></img>
+<img height="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/sunposwidget1_1x1_preview.png" align="center"></img>
+<img height="128px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/sunposwidget0_3x1_preview.png" align="center"></img>
+<img height="256px" src="https://forrestguice.github.io/Suntimes/help/widgets/images/sunposwidget0_3x2_preview.png" align="center"></img>
 <br />Additional screenshots can be found on the <a href="https://github.com/forrestguice/SuntimesWidget/wiki/Screenshots">project wiki</a> and in the <a href="https://github.com/forrestguice/SuntimesWidget/tree/gh-pages/doc/screenshots">gh-pages branch</a>.
 
 <img alt="screenshot1" src='https://github.com/forrestguice/SuntimesWidget/blob/gh-pages/doc/screenshots/v0.13.0/en/activity-main0-dark.png' width="280px" />&nbsp;&nbsp;<img alt="screenshot2" src='https://github.com/forrestguice/SuntimesWidget/blob/gh-pages/doc/screenshots/v0.13.0/en/activity-alarms0-dark.png' width="280px" />&nbsp;&nbsp;<img alt="screenshot3" src='https://github.com/forrestguice/SuntimesWidget/blob/gh-pages/doc/screenshots/v0.13.0/en/activity-main0-light.png' width="280px" />
