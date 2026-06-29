@@ -578,9 +578,10 @@ public class LightGraphDialog extends BottomSheetDialogBase
 
     protected void updateEarliestLatestText(Context context, TextView textView, View layout, long eventTime, int labelResID)
     {
+        boolean showSeconds = WidgetSettings.loadShowSecondsPref(context, 0);
         Calendar calendar = getCalendar(context, eventTime);
         if (calendar != null) {
-            textView.setText(utils.calendarDateTimeDisplayString(AndroidResources.wrap(context), calendar).toString());
+            textView.setText(utils.calendarDateTimeDisplayString(AndroidResources.wrap(context), calendar, true, showSeconds).toString());
         } else textView.setText("");
         if (calendar != null && context != null) {
             layout.setOnClickListener(onMoreInfoClicked(context.getString(labelResID), calendar.getTimeInMillis()));
