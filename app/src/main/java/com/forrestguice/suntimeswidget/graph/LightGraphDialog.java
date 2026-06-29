@@ -988,8 +988,7 @@ public class LightGraphDialog extends BottomSheetDialogBase
             long itemMillis = itemData.getLongExtra(MenuAddon.EXTRA_SHOW_DATE, -1L);
             if (itemMillis != -1L)
             {
-                Calendar itemTime = Calendar.getInstance();
-                itemTime.setTimeInMillis(itemMillis);
+                Calendar itemTime = getCalendar(context, itemMillis);
                 boolean showSeconds = WidgetSettings.loadShowSecondsPref(context, 0);
                 boolean showTime = WidgetSettings.loadShowTimeDatePref(context, 0);
 
