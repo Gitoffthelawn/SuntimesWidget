@@ -231,7 +231,7 @@
     <string name="datetime_format_verylong1"><xliff:g id="dateFormat">%1$s</xliff:g> [<xliff:g example="UTC" id="tzID">%2$s</xliff:g>] [<xliff:g example="Future" id="suffix">%3$s</xliff:g>]</string>
     <string name="dateyear_format_short"><xliff:g id="patternYear">yyyy</xliff:g></string>                                        <!-- yyyy ... e.g. 2017 -->
 
-    <string name="date_any">Qualsiasi data</string>
+    <!--<string name="date_any">Qualsiasi data</string>-->
     <string name="format_share"><xliff:g id="label">%1$s</xliff:g>\n<xliff:g id="formattedDate">%2$s</xliff:g></string>
 
     <!-- location display formats -->
@@ -2168,12 +2168,13 @@
         <xliff:g id="help_topic3">%3$s</xliff:g><![CDATA[<br />]]>
         <xliff:g id="help_topic4">%4$s</xliff:g>
     </string>
-    <string name="privacy_policy0"><![CDATA[<b>Privacy:</b><br/>Suntimes non raccoglie, non archivia né trasmette dati personali dell'utente. Non contiene <b>pubblicità</b>, <b>analisi</b>, <b>tracker</b> né <b>permessi non necessari</b>.]]></string>
+    <string name="privacy_policy0"><![CDATA[<b>Privacy:</b><br/>Suntimes non raccoglie, non archivia né trasmette dati personali dell\'utente. Non contiene <b>pubblicità</b>, <b>analisi</b>, <b>tracker</b> né <b>permessi non necessari</b>.]]></string>
     <string name="privacy_policy"><![CDATA[<b>Privacy:</b><br/>Suntimes non raccoglie, memorizza, né trasmette dati personali dell\'utente. Non contiene <b>nessuna pubblicità</b>, <b>nessuna analitica</b>, <b>nessun tracker</b>, e <b>nessun permesso superfluo</b>. <br/><br/>L\'applicazione si configura in base alla località.  Queste informazioni (e altri dati di configurazione utilizzati dall\'applicazione) sono memorizzate localmente e non vengono trasmesse altrove.<br/><br/><xliff:g id="permissionsExplained">%1$s</xliff:g>]]></string>
     <string name="privacy_permission_location"><![CDATA[Suntimes utilizza il permesso di accesso alla <b>posizione</b> per determinare la tua latitudine e longitudine correnti.<br/><br/> Questo permesso è opzionale; la posizione viene configurata manualmente di default.]]></string>
     <string name="privacy_permission_storage"><![CDATA[Suntimes utilizza il permesso di accesso alla <b>memoria esterna</b> per effettuare backup e esportare dati su file (e.g. località, temi).]]></string>
     <string name="privacy_permission_storage1"><![CDATA[Suntimes utilizza il permesso di accesso alla <b>memoria esterna</b> per riprodurre suoni che si trovano sulla scheda SD.<br/><br/>Questo permesso è opzionale; i suoni di default saranno riprodotti se l\'accesso è negato. Questo permesso non è necessario per i suoni di sistema (Media Storage).]]></string>
-    <string name="privacy_permission_dnd"><![CDATA[Suntimes ha bisogno dell'accesso <b>Non disturbare</b> per modificare queste impostazioni all'ora di andare a letto.]]></string>       <string name="privacy_permissiondialog_prompt"><![CDATA[Richiedi permesso ora?]]></string>
+    <string name="privacy_permission_dnd"><![CDATA[Suntimes ha bisogno dell\'accesso <b>Non disturbare</b> per modificare queste impostazioni all\'ora di andare a letto.]]></string>
+    <string name="privacy_permissiondialog_prompt"><![CDATA[Richiedi permesso ora?]]></string>
     <string name="privacy_permissiondialog_ignore">Ignora</string>
     <string name="privacy_permissiondialog_title">Permessi</string>
     <string name="about_dialog_privacy">Privacy</string>
@@ -2238,7 +2239,7 @@
     <string name="crash_dialog_copy">Copia report</string>
     <string name="crash_dialog_message">%s si è bloccata…</string>
     <string name="crash_dialog_message1"><![CDATA[
-        Aiuta a migliorare l'app segnalando questo crash:<br/><br/>
+        Aiuta a migliorare l\'app segnalando questo crash:<br/><br/>
         <b>%1$s</b>
     ]]></string>
     <string name="crash_dialog_title">Report di crash</string>
